@@ -1,0 +1,4 @@
+[functions.mreo-api]
+# Функция сама проверяет подписанный Telegram initData.
+# Стандартная проверка Supabase JWT должна быть выключена, иначе Telegram initData не дойдёт до обработчика.
+verify_jwt = false
