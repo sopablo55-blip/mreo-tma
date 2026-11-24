@@ -35,7 +35,7 @@
       serverStatus = 'Онлайн · Активно';
       return await res.json();
     } catch (err) {
-      serverStatus = 'Ошибка: ' + (err && err.message ? err.message : 'Сеть');
+      serverStatus = 'URL=' + cfg.url + ' | ' + (err && err.message ? err.message : 'Сеть');
       return null;
     }
   }

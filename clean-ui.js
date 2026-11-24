@@ -112,39 +112,7 @@
     setInterval(enhanceButtons, 600);
   }
 
-      window.__mreoIosScrollGuardV198 = true;
-
-  function getActiveScrollers() {
-    const list = [];
-    const candidates = [document.scrollingElement, document.documentElement, document.body, document.getElementById('app'), document.querySelector('.app'), document.getElementById('view'), document.querySelector('main')];
-    for (let i = 0; i < candidates.length; i++) {
-      const el = candidates[i];
-      if (el && el.scrollTop > 0 && list.indexOf(el) === -1) {
-        list.push({ el: el, top: el.scrollTop });
-      }
-    }
-    return list;
-  }
-
-  document.addEventListener('pointerdown', function(e) {
-    const target = e.target && e.target.closest ? e.target.closest('button, .btn, select, input, [role="button"], .dock-item, .mreo-ext-card') : null;
-    if (!target) return;
-    const saved = getActiveScrollers();
-    if (saved.length === 0) return;
-
-    const restoreIosScroll = function() {
-      for (let i = 0; i < saved.length; i++) {
-        const item = saved[i];
-        if (item.el && Math.abs(item.el.scrollTop - item.top) > 10) {
-          item.el.scrollTop = item.top;
-        }
-      }
-    };
-    requestAnimationFrame(restoreIosScroll);
-    setTimeout(restoreIosScroll, 35);
-    setTimeout(restoreIosScroll, 95);
-  }, true);
-  if (document.readyState === 'loading') {
+      if (document.readyState === 'loading') {
     window.addEventListener('DOMContentLoaded', initCleaner);
   } else {
     initCleaner();
