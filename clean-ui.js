@@ -112,78 +112,38 @@
     setInterval(enhanceButtons, 600);
   }
 
-    window.__mreoLockScrollJump = true;
-  document.addEventListener('pointerdown', function(e) {
-    const btn = e.target && e.target.closest ? e.target.closest('button, .btn, [data-auc-bid], [data-tender-run], [data-biz-pawn], [data-biz-repay], [data-biz-buy-asset], [data-biz-collect-rent], [data-club-join], [data-pass-get]') : null;
-    if (!btn) return;
-    const savedY = window.scrollY || document.documentElement.scrollTop || 0;
-    requestAnimationFrame(function() {
-      if (Math.abs((window.scrollY || 0) - savedY) > 8) window.scrollTo(0, savedY);
-    });
-    setTimeout(function() {
-      if (Math.abs((window.scrollY || 0) - savedY) > 8) window.scrollTo(0, savedY);
-    }, 60);
-  }, true);
-    document.addEventListener('pointerup', function(e) {
-    const btn = e.target && e.target.closest ? e.target.closest('button, .btn') : null;
-    if (btn && typeof btn.blur === 'function') setTimeout(function() { btn.blur(); }, 10);
-  }, true);
+      window.__mreoIosScrollGuardV198 = true;
 
-  document.addEventListener('pointerdown', function(e) {
-    const btn = e.target && e.target.closest ? e.target.closest('button, .btn, [data-auc-bid], [data-tender-run], [data-biz-pawn], [data-biz-repay], [data-biz-buy-asset], [data-biz-collect-rent], [data-club-join], [data-pass-get]') : null;
-    if (!btn) return;
-    const appEl = document.querySelector('#app, .app') || document.documentElement;
-    const savedWinY = window.scrollY || 0;
-    const savedAppY = appEl ? appEl.scrollTop : 0;
-    const restore = function() {
-      if (Math.abs((window.scrollY || 0) - savedWinY) > 6) window.scrollTo(0, savedWinY);
-      if (appEl && Math.abs(appEl.scrollTop - savedAppY) > 6) appEl.scrollTop = savedAppY;
-    };
-    requestAnimationFrame(restore);
-    setTimeout(restore, 40);
-    setTimeout(restore, 110);
-  }, true);
-    window.__mreoLiveTopBarV190 = true;
-  let lastRenderedCash = null;
-
-  function syncLiveTopBar() {
-    try {
-      let st = null;
-      if (window.__mreoBridge && typeof window.__mreoBridge.getS === 'function') {
-        st = window.__mreoBridge.getS();
+  function getActiveScrollers() {
+    const list = [];
+    const candidates = [document.scrollingElement, document.documentElement, document.body, document.getElementById('app'), document.querySelector('.app'), document.getElementById('view'), document.querySelector('main')];
+    for (let i = 0; i < candidates.length; i++) {
+      const el = candidates[i];
+      if (el && el.scrollTop > 0 && list.indexOf(el) === -1) {
+        list.push({ el: el, top: el.scrollTop });
       }
-      if (!st) {
-        for (const k of ['mreo_tma_save_v2', 'mreo_tma_save', 'mreo_v1', 'mreo_save']) {
-          const raw = localStorage.getItem(k);
-          if (raw) { st = JSON.parse(raw); break; }
-        }
-      }
-      if (!st || typeof st.cash !== 'number') return;
-
-      const curCash = Math.round(st.cash);
-      if (lastRenderedCash === null) {
-        lastRenderedCash = curCash;
-        return;
-      }
-
-      if (curCash !== lastRenderedCash) {
-        lastRenderedCash = curCash;
-        // Обновляем все элементы шапки, где отображается баланс в рублях
-        const topNodes = document.querySelectorAll('header *, .topbar *, .hud *, .header *, [data-cash], #cash, .cash');
-        for (let i = 0; i < topNodes.length; i++) {
-          const el = topNodes[i];
-          if (el.children.length === 0) {
-            const txt = (el.textContent || '').trim();
-            if (txt.endsWith('₽') && /^[\d\s\u00A0]+₽$/.test(txt)) {
-              el.textContent = curCash.toLocaleString('ru-RU') + ' ₽';
-            }
-          }
-        }
-      }
-    } catch (_) {}
+    }
+    return list;
   }
 
-  setInterval(syncLiveTopBar, 250);
+  document.addEventListener('pointerdown', function(e) {
+    const target = e.target && e.target.closest ? e.target.closest('button, .btn, select, input, [role="button"], .dock-item, .mreo-ext-card') : null;
+    if (!target) return;
+    const saved = getActiveScrollers();
+    if (saved.length === 0) return;
+
+    const restoreIosScroll = function() {
+      for (let i = 0; i < saved.length; i++) {
+        const item = saved[i];
+        if (item.el && Math.abs(item.el.scrollTop - item.top) > 10) {
+          item.el.scrollTop = item.top;
+        }
+      }
+    };
+    requestAnimationFrame(restoreIosScroll);
+    setTimeout(restoreIosScroll, 35);
+    setTimeout(restoreIosScroll, 95);
+  }, true);
   if (document.readyState === 'loading') {
     window.addEventListener('DOMContentLoaded', initCleaner);
   } else {

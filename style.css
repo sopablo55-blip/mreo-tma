@@ -4770,3 +4770,12 @@ html, body, #app, .app, #view, section, article, .panel, .mreo-ext-card {
 button, .btn, [role="button"], .dock-item {
   touch-action: manipulation !important;
 }
+/* === IPHONE_WKWEBVIEW_STABLE_SCROLL_V198 === */
+html, body {
+  overscroll-behavior-y: none !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+#app, .app, #view, main {
+  overflow-anchor: none !important;
+  overscroll-behavior-y: contain !important;
+}
