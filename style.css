@@ -4763,3 +4763,10 @@ button.primary, .btn.primary {
   font-size: 11.5px !important;
   min-height: 40px !important;
 }
+/* === NO_MOBILE_SCROLL_JUMP_V184 === */
+html, body, #app, .app, #view, section, article, .panel, .mreo-ext-card {
+  overflow-anchor: none !important;
+}
+button, .btn, [role="button"], .dock-item {
+  touch-action: manipulation !important;
+}
