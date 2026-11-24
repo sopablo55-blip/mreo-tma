@@ -60,32 +60,19 @@ window.playCaseClickSfx = function() {
   };
 
   const MEDIA_PLATES = [
-    { f: 'Х', d: '777', t: 'ХХ', reg: '77', owner: 'Smotra · Эрик Давидыч', val: 4800000, info: 'Культовая столичная комбинация трёх «Х» и трёх семёрок, ставшая визитной карточкой золотой BMW X5M и автопробегов Smotra.' },
-    { f: 'В', d: '777', t: 'ВВ', reg: '05', owner: 'Wengallbi · Ахмед Венгалби', val: 3600000, info: 'Знаменитый дагестанский номер региона 05, прославившийся на Mercedes-Benz CLS («Банан») и заряженных седанах.' },
-    { f: 'К', d: '777', t: 'РА', reg: '95', owner: 'Асхаб Тамаев · Автопарк 95', val: 5200000, info: 'Одна из самых узнаваемых серий Чеченской Республики, ассоциирующаяся с Lamborghini Aventador и Rolls-Royce.' },
-    { f: 'А', d: '777', t: 'АА', reg: '77', owner: 'Михаил Литвин · Столичный пул', val: 5500000, info: 'Элитная московская комбинация, знакомая зрителям по проектам Mercedes-AMG GT 63 S, BMW M5 Competition и Urus.' },
-    { f: 'О', d: '777', t: 'ОО', reg: '78', owner: 'AcademeG · Константин Заруцкий', val: 3400000, info: 'Петербургская серия региона 78, олицетворяющая авторские инженерные проекты от «Антигелика» до Bentley Ultratank.' },
-    { f: 'М', d: '777', t: 'ММ', reg: '777', owner: 'Дима Гордей · Автоспорт РФ', val: 3900000, info: 'Яркая московская серия 777, ставшая символом тюнинг-проектов Nissan GT-R, Lamborghini Huracan и BMW M5.' },
-    { f: 'А', d: '001', t: 'АА', reg: '777', owner: 'Гусейн Гасанов · Премиум-парк', val: 4600000, info: 'Первая цифра «001» в сочетании с тремя «А» на 777 регионе — узнаваемый знак Rolls-Royce Cullinan и флагманских внедорожников.' },
-    { f: 'В', d: '777', t: 'ВВ', reg: '77', owner: 'Bulkin · Александр Булкин', val: 3500000, info: 'Классика автоблогинга: серия «три В» на трёх семёрках для BMW M4 Competition, Porsche 911 Turbo S и Mercedes-AMG.' },
-    { f: 'У', d: '777', t: 'УУ', reg: '77', owner: 'Алан Енилеев · Автоэксперт РФ', val: 3200000, info: 'Номер чемпиона мира по автосимуляторам и ведущего автожурналиста России, засветившийся на редких суперкарах Москвы.' },
-    { f: 'К', d: '777', t: 'КК', reg: '77', owner: 'Тимати · Чёрный G63 AMG', val: 4900000, info: 'Строгая московская комбинация трёх «К» и семёрок, ставшая символом чёрного Mercedes-Benz G63 AMG в центре столицы.' },
-    { f: 'Е', d: '777', t: 'ЕЕ', reg: '77', owner: 'Егор Крид · Столичный кортеж', val: 4300000, info: 'Эффектная серия «три Е» на 77 регионе, знакомая по клипам и столичным выездам на Lamborghini Urus и Maybach.' },
-    { f: 'С', d: '777', t: 'СС', reg: '77', owner: 'Баста · Представительский класс', val: 4100000, info: 'Солидная комбинация трёх «С» для флагманских седанов Mercedes-Maybach S-Class и Cadillac Escalade.' },
-    { f: 'Н', d: '777', t: 'НН', reg: '77', owner: 'Жекич Дубровский · Синдикат', val: 3300000, info: 'Номер знаменитых автопроектов и розыгрышей Дубровского Синдиката на базе BMW M5, Nissan GT-R и Mercedes-AMG.' },
-    { f: 'Т', d: '777', t: 'ТТ', reg: '77', owner: 'Сергей Стилов · Stilovdaily', val: 3100000, info: 'Символ российской дрифт-культуры: от легенд JDM (Nissan Silvia S15, Mark II) до современных заряженных купе.' },
-    { f: 'Р', d: '777', t: 'РР', reg: '77', owner: 'Гоша Турбо Тех · 1500+ л.с.', val: 3700000, info: 'Культовый знак самых быстрых рекордсменов Unlim 500+ и тюнинг-проектов России на базе Nissan GT-R и Lamborghini.' },
-    { f: 'А', d: '777', t: 'АА', reg: '97', owner: 'Ильдар Авто-подбор · Эксперт РФ', val: 4700000, info: 'Культовый московский код 97 и три семёрки — символ честной автодиагностики, редких находок и оживления легенд.' },
-    { f: 'Х', d: '001', t: 'ХХ', reg: '77', owner: 'Стас Асафьев · Документальный автопром', val: 4200000, info: 'Строгая столичная серия первой сотни 001 для авторских фильмов об истории мирового и российского автопрома.' },
-    { f: 'М', d: '001', t: 'ММ', reg: '77', owner: 'Дмитрий Масленников · Ночной парк', val: 4400000, info: 'Узнаваемый московский номер 001 на флагманских внедорожниках и машинах ночных экспедиций.' },
-    { f: 'В', d: '001', t: 'ВВ', reg: '77', owner: 'Влад А4 · Премиум-парк', val: 4500000, info: 'Яркая столичная комбинация 001 на Lamborghini Urus, Mercedes-Benz G63 AMG и Porsche Taycan.' },
-    { f: 'К', d: '001', t: 'КК', reg: '77', owner: 'Macan · Ночной драйв М5', val: 4600000, info: 'Классика московского ночного драйва на BMW M5 Competition и чёрных седанах представительского класса.' },
-    { f: 'Е', d: '001', t: 'ЕЕ', reg: '77', owner: 'Big Baby Tape · Столичный тюнинг', val: 4100000, info: 'Культовый столичный знак 001 для заряженных немецких купе и редких коллекционных спорткаров.' },
-    { f: 'О', d: '001', t: 'ОО', reg: '77', owner: 'Gazgolder · Кортеж столицы', val: 4800000, info: 'Строгий представительский код первой сотни на чёрных Mercedes-Maybach и внедорожниках сопровождения.' },
-    { f: 'С', d: '001', t: 'СС', reg: '78', owner: 'Георгий Чивчян (Гоча) · Форвард Авто', val: 3800000, info: 'Легенда российского дрифта RDS GP и многократный чемпион мира на культовой Nissan Silvia S15.' },
-    { f: 'Т', d: '001', t: 'ТТ', reg: '77', owner: 'Аркадий Цареградцев · Fail Crew', val: 3600000, info: 'Знаковый номер российского автоспорта и 1000-сильных дрифт-проектов на базе Nissan GT-R и 370Z.' },
-    { f: 'Р', d: '001', t: 'РР', reg: '77', owner: 'Эксклюзивный пул Москвы · 001', val: 4300000, info: 'Элитная московская серия первой сотни 001 для лимитированных суперкаров и закрытых автоклубов России.' }
-  ];
+  { f: 'Х', d: '072', t: 'АУ', reg: '65', owner: 'Михаил Литвин · BMW M8 Comp', val: 5600000, info: 'Редкий сахалинский номер 65-го региона с BMW M8 Competition, фигурирующий в базах автоистории и связанный с проектами Михаила Литвина (наряду с его спорткарами BMW M4 и Ferrari).' },
+  { f: 'М', d: '707', t: 'ММ', reg: '78', owner: 'Smotra · Rolls-Royce Cullinan', val: 6800000, info: 'Один из самых заметных номеров с комбинацией «707» и серией «МММ», который связывают с автомобилями Эрика Давидыча, включая чёрный Rolls-Royce Cullinan (2019 г.) и культовые проекты Smotra.' },
+  { f: 'С', d: '013', t: 'РУ', reg: '05', owner: 'Эльдархан Мамаев · BMW M5 E60', val: 4700000, info: 'Легендарный дагестанский номер 05-го региона, прославившийся на культовой серебристой BMW M5 E60 Эльдархана Мамаева.' },
+  { f: 'А', d: '777', t: 'СХ', reg: '777', owner: 'Асхаб Тамаев · Lamborghini', val: 5800000, info: 'Культовый московский номер с тремя семёрками, прославившийся на Lamborghini Aventador и суперкарах Асхаба Тамаева.' },
+  { f: 'О', d: '777', t: 'ОО', reg: '95', owner: 'Асхаб Тамаев · Aventador 95', val: 6400000, info: 'Легендарная триоль ООО 95-го региона, которую Асхаб Тамаев устанавливал на бирюзовый Lamborghini Aventador.' },
+  { f: 'А', d: '777', t: 'АА', reg: '30', owner: 'Асхаб Тамаев · ААА 30', val: 4500000, info: 'Редкий именной номер серии ААА с тремя семёрками 30-го региона из автопарка Асхаба Тамаева.' },
+  { f: 'О', d: '887', t: 'ОО', reg: '98', owner: 'Булкин · BMW M5 F90', val: 4200000, info: 'Визитная карточка Александра Булкина, с которой началась его коллекция. Перевешивался на многие культовые авто (включая BMW M5 F90).' },
+  { f: 'В', d: '004', t: 'КО', reg: '198', owner: 'Булкин · BMW M2 F87', val: 3800000, info: 'Именной питерский номер, созвучный с псевдонимом (Булкин / Булыч), установленный на спортивное купе BMW M2 F87.' },
+  { f: 'Е', d: '666', t: 'УТ', reg: '198', owner: 'Булкин · Audi RS6', val: 3900000, info: 'Громкая покупка для заряженного универсала Audi RS6, ставшая одним из самых дерзких номеров в автопарке блогера.' },
+  { f: 'Е', d: '999', t: 'ВМ', reg: '05', owner: 'Wengallbi · CLS 63 AMG', val: 4900000, info: 'Главный узнаваемый номер черного Mercedes-Benz CLS 63 AMG («Банан») Ахмеда Венгалби.' },
+  { f: 'А', d: '999', t: 'ВМ', reg: '05', owner: 'Wengallbi · AMG GT 63 S', val: 4600000, info: 'Знаменитая комбинация 05-го региона, которую Ахмед Венгалби устанавливал на Mercedes-AMG GT 63 S и CLS.' },
+  { f: 'Х', d: '777', t: 'АМ', reg: '77', owner: 'Smotra · Эрик Давидыч', val: 5200000, info: 'Легендарный столичный номер золотого BMW X5M и автопробегов Smotra.' }
+];
   let archiveTab = 'gov';
   function mediaInfo(pl) {
     if (!pl) return null;
@@ -193,6 +180,9 @@ const CARS = (window.MREO_CARS || []).map((x, i) => ({ id: 'car_'+i, name: Array
   }
 
   let S = load();
+window.__mreoBridge = { getS: () => S, save: () => (typeof save === 'function' && save()), render: () => (typeof render === 'function' && render()), toast: (m, e) => (typeof toast === 'function' && toast(m, e)) };
+window.__getS = () => S;
+window.__setS = (v) => { S = v; };
   function save() {
     try { localStorage.setItem('mreo_tma_save_v2', JSON.stringify(S)); } catch (e) {}
   }
@@ -338,8 +328,8 @@ return make(false);
             '<stop offset="100%" stop-color="#dfe6ee"/>' +
           '</linearGradient>' +
         '</defs>' +
-        '<rect x="2.5" y="2.5" width="515" height="107" rx="12" fill="url(#' + uid + ')" stroke="#090d16" stroke-width="5"/>' +
-        '<line x1="392" y1="3" x2="392" y2="109" stroke="#090d16" stroke-width="4.8"/>' +
+        '<rect x="2.5" y="2.5" width="515" height="107" rx="12" fill="url(#' + uid + ')" stroke="rgba(148,163,184,0.45)" stroke-width="1"/>' +
+        '<line x1="392" y1="3" x2="392" y2="109" stroke="rgba(148,163,184,0.45)" stroke-width="1"/>' +
         '<circle cx="16" cy="56" r="3.6" fill="#94a3b8" stroke="#334155" stroke-width="1.1"/>' +
         '<circle cx="504" cy="56" r="3.6" fill="#94a3b8" stroke="#334155" stroke-width="1.1"/>' +
         '<text x="52" y="83" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="800" fill="#090d16" text-anchor="middle">' + f + '</text>' +
@@ -401,7 +391,7 @@ return make(false);
 
   function renderRoll() {
     const cost = 10000;
-    const displayPlate = (rollStrip && rollStrip.at(0)) ? rollStrip.at(0) : (lastRolled || S.lastTerminalPlate || { f: 'А', d: '777', t: 'АА', reg: '77', rar: 'epic', frame: 'none' });
+    const displayPlate = (rollStrip && rollStrip.at(0)) ? rollStrip.at(0) : (lastRolled || S.lastTerminalPlate || null);
     const ser = lastRolled ? seriesInfo(lastRolled) : null;
     const med = lastRolled ? mediaInfo(lastRolled) : null;
 
@@ -1446,12 +1436,7 @@ function renderModal() {
     m.innerHTML = tag('div', 'class="modal-box"', body + closeBtn);
   }
 
-  window.__mreoGoTab = function(nextTab) {
-    if (!nextTab || tab === nextTab) return;
-    tab = nextTab;
-    haptic('light');
-    render();
-  };
+  window.__mreoGoTab = function(v) { if (v) { tab = v; if (typeof haptic === 'function') haptic('light'); render(); } };
   function renderLiquidDock() {
     const nav = $('#nav') || $('#tabs') || $('nav') || $('.liquid-dock') || $('.tabs');
     if (!nav) return;
@@ -1463,7 +1448,8 @@ function renderModal() {
       ['market', 'Рынок', '<path d="M3 10l9-6 9 6"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/>'],
       ['wheel', 'Колесо', '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.2"/><line x1="12" y1="4" x2="12" y2="9.8"/><line x1="12" y1="14.2" x2="12" y2="20"/><line x1="4" y1="12" x2="9.8" y2="12"/><line x1="14.2" y1="12" x2="20" y2="12"/>'],
       ['games', 'Игры', '<rect x="3" y="6" width="18" height="12" rx="4"/><line x1="8" y1="10" x2="8" y2="14"/><line x1="6" y1="12" x2="10" y2="12"/><circle cx="15.5" cy="10.5" r="1"/><circle cx="17.5" cy="13.5" r="1"/>'],
-      ['profile', 'Профиль', '<circle cx="12" cy="8" r="3.5"/><path d="M5 19c1.5-3.5 4.2-5 7-5s5.5 1.5 7 5"/>']
+      ['shop', 'Магазин', '<path d="M6 7h12l-1 12H7L6 7z"/><path d="M9 7V5a3 3 0 0 1 6 0v2"/>'],
+    ['profile', 'Профиль', '<circle cx="12" cy="8" r="3.5"/><path d="M5 19c1.5-3.5 4.2-5 7-5s5.5 1.5 7 5"/>']
     ];
     const activeIdx = Math.max(0, tabs.findIndex((t) => t.at(0) === tab));
     if (!nav._built || !nav.querySelector('.dock-pill')) {
@@ -1500,23 +1486,27 @@ function renderModal() {
   function bindLiquidDockSwipe(nav, tabs) {
     if (nav._swipeBound) return;
     nav._swipeBound = true;
+    nav.addEventListener('pointerdown', (e) => {
+      nav._downX = e.clientX;
+      nav._downTime = Date.now();
+    }, { passive: true });
     nav.addEventListener('pointerup', (e) => {
-      if (Math.abs(e.clientX - (nav._downX || e.clientX)) <= 8) {
+      const dx = Math.abs(e.clientX - (nav._downX ?? e.clientX));
+      if (dx <= 22) {
         const btn = e.target && e.target.closest ? e.target.closest('.dock-item') : null;
-        if (btn && btn.dataset.v && tab !== btn.dataset.v) {
-          tab = btn.dataset.v;
-          haptic('light');
-          render();
+        if (btn && btn.dataset && btn.dataset.v) {
+          if (tab !== btn.dataset.v) {
+            tab = btn.dataset.v;
+            if (typeof haptic === 'function') haptic('light');
+            render();
+          }
         }
       }
     });
-    nav.addEventListener('pointerdown', (e) => { nav._downX = e.clientX; });
     nav.addEventListener('click', (e) => {
-      if (navMovedLock) return;
-      const btn = e.target && e.target.closest ? e.target.closest('[data-v]') : null;
-      if (btn && btn.dataset.v) {
+      const btn = e.target && e.target.closest ? e.target.closest('.dock-item, [data-v]') : null;
+      if (btn && btn.dataset && btn.dataset.v && tab !== btn.dataset.v) {
         tab = btn.dataset.v;
-        haptic('light');
         render();
       }
     });
@@ -1618,6 +1608,7 @@ function renderModal() {
         else if (tab === 'wheel') view.innerHTML = renderWheel();
         else if (tab === 'games') view.innerHTML = renderGames();
         else if (tab === 'profile') view.innerHTML = renderProfile();
+        else if (tab === 'shop') view.innerHTML = renderShop();
       } catch (err) {
         console.error(err);
         view.innerHTML = '<section class="hero"><h2>Ошибка вкладки: ' + tab + '</h2><p class="sub">' + String(err.message || err) + '</p></section>';
@@ -1747,7 +1738,12 @@ if (a === 'tab') { tab = v; render(); return; }
     if (a === 'open_case') {
     const c = CASES.find((x) => x.id === v);
     if (!c) return;
-    if (S.cash < c.price) { noMoney(c.price, btn); return; }
+    if (S.cash < c.price) {
+      const diff = Math.max(0, c.price - (S.cash || 0));
+      if (typeof toast === 'function') toast('Недостаточно средств! Не хватает ' + money(diff), true);
+      if (typeof noMoney === 'function') noMoney(c.price, btn);
+      return;
+    }
     S.cash -= c.price;
     const winIdx = 22;
     const strip = Array.from({ length: 28 }, () => {
@@ -1824,6 +1820,7 @@ if (a === 'tab') { tab = v; render(); return; }
     return;
   }
 
+    if (a === 'g_mode') { gMode = v; render(); return; }
     if (a === 'g_bet') { gBet = Number(v); render(); return; }
     if (a === 'g_bet_max') { gBet = Math.max(10000, Math.floor(S.cash || 10000)); render(); return; }
     if (a === 'coin_flip') {
@@ -2841,102 +2838,607 @@ else init();
 setInterval(enrichProfileArchive, 350);
 })();
 
-
-/* === MREO_UNIFIED_GAME_LOGIC_V1 === */
+/* === REALISTIC_ECONOMY_AND_CLEAN_PLATES_V67 === */
 (function() {
-  if (window.__mreoUnifiedLogicInstalled) return;
-  window.__mreoUnifiedLogicInstalled = true;
+  if (window.__mreoBalancedV67) return;
+  window.__mreoBalancedV67 = true;
 
-  // 1. Единый расчет множителя статуса игрока (Уровень + Автомобиль + Надетый на авто номер)
-  window.getMreoMultiplier = function() {
-    try {
-      const lvl = Math.max(1, Number((typeof S !== 'undefined' && S.lvl) || 1));
-      const lvlMult = 1 + (lvl - 1) * 0.07;
+  // 1. Плавный, честный множитель влияния (без экспоненциальной инфляции x10)
+  window.getMreoSynergy = function() {
+    const st = (window.__mreoBridge && typeof window.__mreoBridge.getS === "function" ? window.__mreoBridge.getS() : null) || ((typeof S !== "undefined" && S) ? S : {});
+    const lvl = Math.max(1, Number(st.lvl) || 1);
+    const conn = Math.max(0, Number(st.linkLvl || st.conn || st.bribe || 0) || 0);
+    const ownedRegs = Array.isArray(st.ownedRegs) ? st.ownedRegs : [];
 
-      let carMult = 1.0;
-      if (typeof S !== 'undefined' && Array.isArray(CARS) && S.curCar) {
-        const carObj = CARS.find(c => c.id === S.curCar);
-        if (carObj && carObj.mult) carMult = Number(carObj.mult) || 1.0;
+    let carMult = 1.0;
+    let carName = "Пешком";
+    if (Array.isArray(typeof CARS !== "undefined" ? CARS : null) && st.curCar) {
+      const c = CARS.find(x => x && x.id === st.curCar);
+      if (c) {
+        carMult = 1 + Math.min(0.35, ((Number(c.mult) || 1) - 1) * 0.28);
+        carName = c.name || "Авто";
       }
-
-      let plateBonus = 1.0;
-      if (typeof S !== 'undefined' && S.equippedPlate && Array.isArray(S.plates)) {
-        const eq = S.plates.find(p => p && p.id === S.equippedPlate);
-        if (eq) {
-          const r = String(eq.rar || eq.tier || '').toLowerCase();
-          if (r.includes('spec') || r.includes('legend')) plateBonus = 1.35;
-          else if (r.includes('epic')) plateBonus = 1.22;
-          else if (r.includes('rare')) plateBonus = 1.12;
-          else plateBonus = 1.05;
-        }
-      }
-
-      return Number((lvlMult * carMult * plateBonus).toFixed(2));
-    } catch (_) {
-      return 1.0;
     }
-  };
 
-  // 2. Умное начисление опыта (XP) с автоматическим повышением уровня и премией
-  window.grantMreoXp = function(amount) {
-    try {
-      if (typeof S === 'undefined') return;
-      S.xp = (Number(S.xp) || 0) + Math.max(1, Math.round(amount));
-      S.lvl = Math.max(1, Number(S.lvl) || 1);
-      let leveledUp = false;
-      while (true) {
-        const need = Math.round(120 * Math.pow(1.28, S.lvl - 1));
-        if (S.xp >= need) {
-          S.xp -= need;
-          S.lvl += 1;
-          const bonusCash = S.lvl * 15000;
-          S.cash = (Number(S.cash) || 0) + bonusCash;
-          leveledUp = true;
-          if (typeof toast === 'function') {
-            toast('Новый уровень МРЭО: Ур. ' + S.lvl + '! Премия +' + bonusCash.toLocaleString('ru-RU') + ' ₽');
-          }
-        } else {
-          break;
-        }
+    let plateBonus = 0;
+    let equippedCode = "Без номера";
+    if (st.equippedPlate && Array.isArray(st.plates)) {
+      const eq = st.plates.find(p => p && p.id === st.equippedPlate);
+      if (eq) {
+        equippedCode = (eq.a || "") + (eq.num || "") + (eq.b || "") + " " + (eq.reg || "");
+        const r = String(eq.rar || eq.tier || "").toLowerCase();
+        if (r.includes("spec") || r.includes("legend")) plateBonus = 0.22;
+        else if (r.includes("epic")) plateBonus = 0.14;
+        else if (r.includes("rare")) plateBonus = 0.08;
+        else plateBonus = 0.03;
       }
-      if (leveledUp && typeof haptic === 'function') haptic('success');
-    } catch (_) {}
+    }
+
+    // Аддитивный расчёт: плавный рост от 1.00 до ~2.10 на максимальной прокачке
+    const addBonus = Math.min(0.45, (lvl - 1) * 0.025)
+                   + Math.min(0.30, conn * 0.03)
+                   + (carMult - 1)
+                   + plateBonus
+                   + Math.min(0.24, ownedRegs.length * 0.06);
+
+    const vipBoost = st.vipTier === 'vip' ? 0.30 : (st.vipTier === 'premium' ? 0.15 : 0); const total = Number((1 + addBonus + vipBoost).toFixed(2));
+    const baseFee = Math.max(4, 12 - conn); const marketFeePct = st.vipTier === 'vip' ? 3 : (st.vipTier === 'premium' ? Math.min(6, baseFee) : baseFee);
+
+    return {
+      total,
+      lvl,
+      conn,
+      carMult: Number(carMult.toFixed(2)),
+      carName,
+      equippedCode,
+      ownedRegs,
+      marketFeePct
+    };
   };
 
-  // 3. Обвязка генерации номеров: учет множителя статуса + защита от дубликатов
-  const origMakePlate = typeof makePlate === 'function' ? makePlate : null;
+  // 2. Честная прогрессия опыта (XP) с умеренными наградами
+  window.grantMreoXp = function(amount) {
+    if (typeof S === "undefined" || !S) return;
+    S.xp = (Number(S.xp) || 0) + Math.max(1, Math.round(amount));
+    S.lvl = Math.max(1, Number(S.lvl) || 1);
+    let up = false;
+    while (true) {
+      const need = Math.round(180 * Math.pow(1.32, S.lvl - 1));
+      if (S.xp >= need) {
+        S.xp -= need;
+        S.lvl += 1;
+        const reward = S.lvl * 7500;
+        S.cash = (Number(S.cash) || 0) + reward;
+        up = true;
+        if (typeof toast === "function") {
+          toast("Новый уровень: Ур. " + S.lvl + "! Премия +" + reward.toLocaleString("ru-RU") + " ₽");
+        }
+      } else {
+        break;
+      }
+    }
+    if (up && typeof haptic === "function") haptic("success");
+    if (typeof save === "function") save();
+  };
+
+  // 3. Балансировка цен номеров при выдаче и открытии кейсов (строго по стоимости источника)
+  window.__lastOpenedCasePrice = 0;
+  document.addEventListener("click", function(e) {
+    const btn = e.target && e.target.closest ? e.target.closest("[data-a]") : null;
+    if (!btn) return;
+    const act = btn.getAttribute("data-a");
+    if (act === "open_case") {
+      const card = btn.closest(".panel, div");
+      const m = (card ? card.textContent : "").match(/([\d\s ]+)\s*₽/);
+      window.__lastOpenedCasePrice = m ? Number(m.replace(/\D/g, "")) || 35000 : 35000;
+      window.grantMreoXp(25);
+    } else if (act === "roll" || act === "spin") {
+      window.__lastOpenedCasePrice = 0;
+      window.grantMreoXp(12);
+    } else if (act === "buy_lot") {
+      window.grantMreoXp(20);
+    } else if (act === "buy_car") {
+      window.grantMreoXp(65);
+    } else if (act === "cruise" || act === "drive") {
+      const syn = window.getMreoSynergy();
+      const extra = Math.round(2800 * syn.total);
+      if (typeof S !== "undefined" && S) S.cash = (Number(S.cash) || 0) + extra;
+      window.grantMreoXp(18);
+    } else if (act === "craft" || act === "reroll_reg") {
+      window.grantMreoXp(22);
+    }
+  }, true);
+
+  const origMakePlate = typeof makePlate === "function" ? makePlate : null;
   if (origMakePlate) {
     window.makePlate = function() {
       let pl = origMakePlate.apply(this, arguments);
       try {
-        if (pl && typeof S !== 'undefined' && Array.isArray(S.plates)) {
-          // Если номер с такой строкой уже есть в гараже — перегенерируем до уникального (до 6 попыток)
-          for (let attempt = 0; attempt < 6; attempt++) {
-            const code = (pl.a || '') + (pl.num || '') + (pl.b || '') + (pl.reg || '');
-            const exists = S.plates.some(x => x && ((x.a || '') + (x.num || '') + (x.b || '') + (x.reg || '')) === code);
-            if (!exists) break;
+        const syn = window.getMreoSynergy();
+        if (pl && typeof S !== "undefined" && Array.isArray(S.plates)) {
+          for (let i = 0; i < 8; i++) {
+            const code = (pl.a || "") + (pl.num || "") + (pl.b || "") + (pl.reg || "");
+            const dup = S.plates.some(x => x && ((x.a || "") + (x.num || "") + (x.b || "") + (x.reg || "")) === code);
+            if (!dup) break;
             pl = origMakePlate.apply(this, arguments);
           }
         }
-        const mult = window.getMreoMultiplier();
-        if (pl && typeof pl.val === 'number') {
-          pl.val = Math.max(1500, Math.round((pl.val * mult) / 100) * 100);
+        if (pl && typeof pl.val === "number") {
+          const casePrice = window.__lastOpenedCasePrice || 0;
+          if (casePrice > 0) {
+            // Строгий потолок дропа из кейса: от 0.35x до 2.2x от цены самого кейса (редкий джекпот до 3.2x)
+            const rollFactor = Math.random() < 0.12 ? (1.8 + Math.random() * 1.4) : (0.35 + Math.random() * 1.15);
+            pl.val = Math.max(2500, Math.round((casePrice * rollFactor * syn.total) / 500) * 500);
+            if (casePrice <= 60000 && (pl.rar === "spec" || pl.rar === "legend")) {
+              pl.rar = "rare";
+              pl.tier = "rare";
+            }
+          } else {
+            // Обычная выдача в окне МРЭО: реалистичная стоимость от 2 500 ₽ с плавным бонусом влияния
+            const isMyReg = syn.ownedRegs.includes(String(pl.reg || ""));
+            const regBoost = isMyReg ? 1.15 : 1.0;
+            pl.val = Math.max(2500, Math.round((pl.val * 0.55 * syn.total * regBoost) / 500) * 500);
+          }
         }
       } catch (_) {}
       return pl;
     };
   }
 
-  // 4. Связываем все игровые действия с начислением XP и прогрессией
-  document.addEventListener('click', function(e) {
-    const btn = e.target && e.target.closest ? e.target.closest('[data-a]') : null;
+  // 4. Компактная плашка индекса влияния на главном экране
+  function renderSynergyBanner() {
+    const view = document.getElementById("view");
+    if (!view || document.getElementById("mreo-synergy-card")) return;
+    const txt = view.textContent || "";
+    if (!txt.includes("Выдача") && !txt.includes("Талон") && !txt.includes("Окно")) return;
+
+    const syn = window.getMreoSynergy();
+    const card = document.createElement("section");
+    card.className = "panel";
+    card.id = "mreo-synergy-card";
+    card.style.cssText = "padding:12px 14px !important;margin-bottom:12px !important;background:linear-gradient(135deg,#182030 0%,#121620 100%) !important;border:1px solid rgba(250,204,21,0.22) !important;";
+    card.innerHTML =
+      "<div style=\"display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;\">" +
+        "<span style=\"font-size:12px;font-weight:900;color:#facc15;letter-spacing:0.04em;\">⚡ ИНДЕКС ВЛИЯНИЯ МРЭО</span>" +
+        "<span style=\"background:rgba(250,204,21,0.18);color:#fde047;font-size:13px;font-weight:900;padding:2px 9px;border-radius:999px;\">×" + syn.total + "</span>" +
+      "</div>" +
+      "<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:11px;color:#cbd5e1;\">" +
+        "<div>🚘 Авто: <b style=\"color:#fff;\">" + syn.carName + " (×" + syn.carMult + ")</b></div>" +
+        "<div>🪪 Номер: <b style=\"color:#fff;\">" + syn.equippedCode + "</b></div>" +
+        "<div>🏛️ Регионов: <b style=\"color:#4ade80;\">" + syn.ownedRegs.length + " шт.</b></div>" +
+        "<div>📉 Комиссия биржи: <b style=\"color:#38bdf8;\">" + syn.marketFeePct + "%</b></div>" +
+      "</div>";
+    view.insertAdjacentElement("afterbegin", card);
+  }
+
+  if (typeof window.render === "function") {
+    const origR = window.render;
+    window.render = function() {
+      const res = origR.apply(this, arguments);
+      renderSynergyBanner();
+      return res;
+    };
+  }
+  window.addEventListener("DOMContentLoaded", renderSynergyBanner);
+  setTimeout(renderSynergyBanner, 120);
+})();
+
+/* === REFERRAL_SYSTEM_LVL5_V78 === */
+(function() {
+  if (window.__mreoRefV78) return;
+  window.__mreoRefV78 = true;
+
+  const BOT_USERNAME = "nmrznk_bot";
+
+  window.getCurrentTgId = function() {
+    try {
+      const id = window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initDataUnsafe && window.Telegram.WebApp.initDataUnsafe.user && window.Telegram.WebApp.initDataUnsafe.user.id;
+      if (id) return String(id);
+    } catch (_) {}
+    if (typeof S !== "undefined" && S && S.uid) return String(S.uid);
+    let localId = localStorage.getItem("mreo_guest_uid");
+    if (!localId) {
+      localId = "u" + Math.floor(100000 + Math.random() * 900000);
+      localStorage.setItem("mreo_guest_uid", localId);
+    }
+    return localId;
+  };
+
+  window.generateRefLink = function() {
+    const tgId = window.getCurrentTgId();
+    return "https://t.me/" + BOT_USERNAME + "?start=ref_" + tgId;
+  };
+
+  window.processReferralProgress = async function() {
+    if (typeof S === "undefined" || !S) return;
+    const myId = window.getCurrentTgId();
+
+    if (!S.invitedBy) {
+      let startParam = "";
+      try {
+        startParam = (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initDataUnsafe && window.Telegram.WebApp.initDataUnsafe.start_param) || "";
+      } catch (_) {}
+      const urlRef = new URLSearchParams(window.location.search).get("ref") || "";
+      const rawRef = startParam.startsWith("ref_") ? startParam.slice(4) : urlRef;
+      if (rawRef && rawRef !== myId) {
+        S.invitedBy = rawRef;
+        if (typeof save === "function") save();
+      }
+    }
+
+    const curLvl = Number(S.lvl) || 1;
+    if (S.invitedBy && curLvl >= 5 && !S.refLvl5Awarded) {
+      S.refLvl5Awarded = true;
+      S.tix = (Number(S.tix ?? S.tickets ?? 0)) + 10;
+      if ("tickets" in S) S.tickets = S.tix;
+      S.cash = (Number(S.cash) || 0) + 50000;
+      if (typeof save === "function") save();
+      if (typeof toast === "function") {
+        toast("Реферальный бонус за 5 уровень: +10 талонов и +50 000 ₽!");
+      }
+      try {
+        if (typeof supabase !== "undefined" && supabase && supabase.rpc) {
+          await supabase.rpc("award_referral_lvl5", {
+            referrer_id: S.invitedBy,
+            friend_id: myId,
+            referrer_tix: 15,
+            referrer_cash: 75000
+          });
+        }
+      } catch (_) {}
+    }
+  };
+
+  document.addEventListener("click", function(e) {
+    const btn = e.target && e.target.closest ? e.target.closest("button") : null;
     if (!btn) return;
-    const act = btn.getAttribute('data-a');
-    if (act === 'roll' || act === 'spin') window.grantMreoXp(15);
-    else if (act === 'open_case') window.grantMreoXp(35);
-    else if (act === 'buy_lot') window.grantMreoXp(25);
-    else if (act === 'buy_car') window.grantMreoXp(85);
-    else if (act === 'cruise' || act === 'drive') window.grantMreoXp(20);
-    else if (act === 'craft' || act === 'reroll_reg') window.grantMreoXp(30);
+    const txt = btn.textContent || "";
+    if (txt.includes("Позвать напарника") || txt.includes("Скопировать реф")) {
+      const link = window.generateRefLink();
+      if (navigator.clipboard) navigator.clipboard.writeText(link);
+      if (typeof toast === "function") toast("Реферальная ссылка скопирована: " + link);
+    }
   }, true);
+
+  window.addEventListener("DOMContentLoaded", window.processReferralProgress);
+  setInterval(window.processReferralProgress, 5000);
+})();
+
+/* === NATIVE_SHOP_MODULE_V88 === */
+(function() {
+  if (window.__mreoShopV101) return;
+  window.__mreoShopV101 = true;
+
+  function getState() {
+    if (window.__mreoBridge && typeof window.__mreoBridge.getS === "function") return window.__mreoBridge.getS();
+    if (typeof S !== "undefined") return S;
+    try {
+      const raw = localStorage.getItem("mreo_tma_save_v2") || localStorage.getItem("mreo_tma_save");
+      if (raw) return JSON.parse(raw);
+    } catch (_) {}
+    return null;
+  }
+
+  function syncUI(st) {
+    if (window.__mreoBridge) {
+      window.__mreoBridge.save();
+      window.__mreoBridge.render();
+    } else {
+      try {
+        if (st) localStorage.setItem("mreo_tma_save_v2", JSON.stringify(st));
+      } catch (_) {}
+      location.reload();
+    }
+  }
+
+  function notify(msg, isErr) {
+    if (window.__mreoBridge && window.__mreoBridge.toast) window.__mreoBridge.toast(msg, isErr);
+    else if (typeof toast === "function") toast(msg, isErr);
+    else alert(msg);
+  }
+
+  const STARS_TIERS = [
+    { id: "stars_25", title: "Стартовый Буст · 25 ⭐", desc: "+40 талонов, +250 000 ₽ и +1 уровень Связей МРЭО", stars: 25, tix: 40, cash: 250000, conn: 1, badge: "ВЫГОДНЫЙ СТАРТ" },
+    { id: "stars_75", title: "Статус «Перекуп PRO» · 75 ⭐", desc: "Комиссия биржи 6% навсегда + 15% к цене номеров + 150 тал. + 1 млн ₽", stars: 75, tix: 150, cash: 1000000, vip: "premium", badge: "НАВСЕГДА" },
+    { id: "stars_190", title: "Набор «Спецсерия ФСО» · 190 ⭐", desc: "Спецномер Е 777 КХ 77 в гараж + 450 талонов + 3.5 млн ₽ + 2 Связи", stars: 190, tix: 450, cash: 3500000, conn: 2, givePlate: { a: "Е", num: "777", b: "КХ", reg: "77", val: 1850000, rar: "spec" }, badge: "СПЕЦНОМЕР" },
+    { id: "stars_450", title: "Кортеж VIP · 450 ⭐", desc: "Комиссия 3% и +30% ко всем доходам навсегда + номер А 001 МР 97 + 1 200 тал. + 12 млн ₽", stars: 450, tix: 1200, cash: 12000000, vip: "vip", givePlate: { a: "А", num: "001", b: "МР", reg: "97", val: 4500000, rar: "spec" }, badge: "ЭКСКЛЮЗИВ VIP" }
+  ];
+
+  const RUB_OFFERS = [
+    { id: "tix_10", title: "Пакет «Дежурный»", desc: "+10 талонов выдачи МРЭО", basePrice: 65000, tix: 10, badge: "РАСХОДНИК" },
+    { id: "tix_35", title: "Смена инспектора", desc: "+35 талонов выдачи МРЭО", basePrice: 210000, tix: 35, badge: "РАСХОДНИК" },
+    { id: "conn_up", title: "Связи в управлении (+1)", desc: "Увеличивает множитель дохода (цена растёт с уровнем)", basePrice: 320000, conn: 1, scaleByConn: true, badge: "ПРОКАЧКА" }
+  ];
+
+  function getRubPrice(item) {
+    const st = getState();
+    if (!item.scaleByConn || !st) return item.basePrice;
+    const c = Math.max(0, Number(st.linkLvl || st.conn || 0));
+    return Math.round(item.basePrice * Math.pow(1.45, c));
+  }
+
+  function grantPackage(pkg) {
+    const st = getState();
+    if (!st) return;
+    if (pkg.tix) st.free = (Number(st.free) || 0) + Number(pkg.tix);
+    if (pkg.cash) st.cash = (Number(st.cash) || 0) + Number(pkg.cash);
+    if (pkg.conn) st.linkLvl = (Number(st.linkLvl) || 0) + Number(pkg.conn);
+    if (pkg.vip && st.vipTier !== "vip") st.vipTier = pkg.vip;
+    if (pkg.givePlate && Array.isArray(st.plates)) {
+      st.plates.unshift({ id: "vip_" + Date.now() + "_" + Math.floor(Math.random() * 999), f: pkg.givePlate.a, d: pkg.givePlate.num, t: pkg.givePlate.b, reg: pkg.givePlate.reg, val: pkg.givePlate.val, rar: pkg.givePlate.rar });
+    }
+    syncUI(st);
+    notify("Куплено: " + pkg.title + "!", false);
+  }
+
+  window.buyStarsTier = function(id) {
+    const pkg = STARS_TIERS.find(x => x.id === id);
+    if (pkg && typeof window.buyWithTelegramStars === "function") {
+      window.buyWithTelegramStars(pkg.id, pkg.stars, function() { grantPackage(pkg); });
+    }
+  };
+
+  window.buyRubOffer = function(id) {
+    const st = getState();
+    if (!st) return;
+    const pkg = RUB_OFFERS.find(x => x.id === id);
+    if (!pkg) return;
+    const price = getRubPrice(pkg);
+    const bal = Number(st.cash) || 0;
+    if (bal < price) {
+      notify("Недостаточно средств! Не хватает " + (price - bal).toLocaleString("ru-RU") + " ₽", true);
+      return;
+    }
+    st.cash = bal - price;
+    grantPackage(pkg);
+  };
+
+  window.getShopHtml = function() {
+    const st = getState() || {};
+    const curVip = st.vipTier ? String(st.vipTier).toUpperCase() : "СТАНДАРТ";
+    const starsHtml = STARS_TIERS.map(it =>
+      "<div style=\"background:linear-gradient(135deg,#281e3d,#151822);border:1px solid rgba(250,204,21,0.34);border-radius:16px;padding:13px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center;gap:10px;\">" +
+        "<div style=\"min-width:0;\"><div style=\"display:flex;align-items:center;gap:6px;flex-wrap:wrap;\"><b style=\"font-size:14px;color:#fff;\">" + it.title + "</b><span style=\"background:#facc15;color:#0b0d11;font-size:10px;font-weight:900;padding:2px 7px;border-radius:999px;\">" + it.badge + "</span></div><div class=\"muted\" style=\"font-size:12px;margin-top:4px;\">" + it.desc + "</div></div>" +
+        "<button type=\"button\" class=\"btn small primary\" style=\"flex-shrink:0;\" data-shop-stars=\"" + it.id + "\">" + it.stars + " ⭐</button>" +
+      "</div>"
+    ).join("");
+
+    const rubHtml = RUB_OFFERS.map(it => {
+      const p = getRubPrice(it);
+      return (
+        "<div style=\"background:var(--card-2);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:12px;margin-bottom:9px;display:flex;justify-content:space-between;align-items:center;gap:10px;\">" +
+          "<div style=\"min-width:0;\"><div style=\"display:flex;align-items:center;gap:6px;flex-wrap:wrap;\"><b style=\"font-size:14px;color:#fff;\">" + it.title + "</b><span style=\"background:rgba(56,189,248,0.16);color:#7dd3fc;font-size:10px;font-weight:900;padding:2px 7px;border-radius:999px;\">" + it.badge + "</span></div><div class=\"muted\" style=\"font-size:12px;margin-top:3px;\">" + it.desc + "</div></div>" +
+          "<button type=\"button\" class=\"btn small primary\" style=\"flex-shrink:0;\" data-shop-buy=\"" + it.id + "\">" + p.toLocaleString("ru-RU") + " ₽</button>" +
+        "</div>"
+      );
+    }).join("");
+
+    return (
+      "<section class=\"panel\"><div style=\"display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;\"><div class=\"hero-kicker\" style=\"margin:0;\"><span class=\"dot-live\"></span>ЭКСКЛЮЗИВ ЗА TELEGRAM STARS</div><span style=\"font-size:11px;font-weight:900;color:#fde047;\">СТАТУС: " + curVip + "</span></div><h2 style=\"font-size:20px;\">⭐ Привилегии и спецнаборы</h2><div class=\"muted\" style=\"margin-bottom:11px;\">Уникальные VIP-статусы, снижение комиссии до 3% и готовые спецномера в гараж.</div>" + starsHtml + "</section>" +
+      "<section class=\"panel\"><h3 style=\"font-size:17px;\">🎟️ Снабжение за игровую валюту</h3><div class=\"muted\" style=\"margin-bottom:10px;\">Базовые расходники и талоны для ежедневной работы в отделе.</div>" + rubHtml + "</section>"
+    );
+  };
+
+  window.renderShopView = function() {
+    const view = document.getElementById("view");
+    if (view) view.innerHTML = window.getShopHtml();
+  };
+})();
+function renderShop() { return (typeof window.getShopHtml === "function") ? window.getShopHtml() : ""; }
+window.renderShop = renderShop;
+
+/* === EXACT_COORDS_DOCK_TAP_V93 === */
+(function() {
+  if (window.__mreoCoordsDockV101) return;
+  window.__mreoCoordsDockV101 = true;
+  let startX = 0, startY = 0, isDownOnDock = false;
+  function findDockContainer() { const item = document.querySelector(".dock-item"); return item ? item.parentElement : null; }
+  function switchTabByClientX(clientX) {
+    const dock = findDockContainer();
+    if (!dock) return;
+    for (const btn of Array.from(dock.querySelectorAll(".dock-item"))) {
+      const r = btn.getBoundingClientRect();
+      if (clientX >= r.left - 2 && clientX <= r.right + 2) {
+        const targetTab = btn.getAttribute("data-v") || btn.getAttribute("data-tab");
+        if (targetTab && typeof window.__mreoGoTab === "function") window.__mreoGoTab(targetTab);
+        return;
+      }
+    }
+  }
+  document.addEventListener("pointerdown", function(e) {
+    const dock = findDockContainer();
+    if (!dock) return;
+    const r = dock.getBoundingClientRect();
+    if (e.clientY >= r.top && e.clientY <= r.bottom && e.clientX >= r.left && e.clientX <= r.right) { isDownOnDock = true; startX = e.clientX; startY = e.clientY; }
+    else isDownOnDock = false;
+  }, true);
+  document.addEventListener("pointerup", function(e) {
+    if (!isDownOnDock) return;
+    isDownOnDock = false;
+    if (Math.abs(e.clientX - startX) <= 16 && Math.abs(e.clientY - startY) <= 24) switchTabByClientX(e.clientX);
+  }, true);
+})();
+
+/* === SHOP_CAPTURING_CLICK_V104 === */
+(function() {
+  if (window.__mreoShopCapV104) return;
+  window.__mreoShopCapV104 = true;
+
+  document.addEventListener("click", function(e) {
+    const rubBtn = e.target && e.target.closest ? e.target.closest("[data-shop-buy]") : null;
+    if (rubBtn) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      const id = rubBtn.getAttribute("data-shop-buy");
+      if (id && typeof window.buyRubOffer === "function") {
+        window.buyRubOffer(id);
+      }
+      return;
+    }
+    const starBtn = e.target && e.target.closest ? e.target.closest("[data-shop-stars]") : null;
+    if (starBtn) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      const id = starBtn.getAttribute("data-shop-stars");
+      if (id && typeof window.buyStarsTier === "function") {
+        window.buyStarsTier(id);
+      }
+    }
+  }, true);
+})();
+
+/* === SAFE_NON_BLOCKING_WINDOW_AND_SYNERGY_V113 === */
+
+(function() {
+  if (window.__mreoSafeLoopV113) return;
+  window.__mreoSafeLoopV113 = true;
+
+  const SHIFT_GOAL = 50;
+  let hookLock = false;
+
+  function getSt() {
+    if (window.__mreoBridge && typeof window.__mreoBridge.getS === "function") return window.__mreoBridge.getS();
+    if (typeof S !== "undefined") return S;
+    return null;
+  }
+
+  function saveOnly() {
+    if (window.__mreoBridge && typeof window.__mreoBridge.save === "function") window.__mreoBridge.save();
+    else if (typeof save === "function") save();
+  }
+
+  function notifyMsg(txt, err) {
+    if (window.__mreoBridge && typeof window.__mreoBridge.toast === "function") window.__mreoBridge.toast(txt, err);
+    else if (typeof toast === "function") toast(txt, err);
+  }
+
+  function injectSafeOverlays() {
+    if (hookLock) return;
+    const view = document.getElementById("view");
+    if (!view) return;
+    const txt = view.textContent || "";
+    if (!txt.includes("Окно выдачи") && !txt.includes("ДЕЖУРНОЕ ОКНО")) return;
+
+    hookLock = true;
+    try {
+      // А. Карточка Индекса влияния МРЭО (вставляем только если её ещё нет)
+      if (!document.getElementById("mreo-synergy-card") && typeof window.getMreoSynergy === "function") {
+        const syn = window.getMreoSynergy();
+        const card = document.createElement("section");
+        card.className = "panel";
+        card.id = "mreo-synergy-card";
+        card.style.cssText = "padding:12px 14px !important;margin-bottom:12px !important;background:linear-gradient(135deg,#182030 0%,#121620 100%) !important;border:1px solid rgba(250,204,21,0.22) !important;";
+        card.innerHTML =
+          "<div style=\"display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;\">" +
+            "<span style=\"font-size:12px;font-weight:900;color:#facc15;letter-spacing:0.04em;\">⚡ ИНДЕКС ВЛИЯНИЯ МРЭО</span>" +
+            "<span style=\"background:rgba(250,204,21,0.18);color:#fde047;font-size:13px;font-weight:900;padding:2px 9px;border-radius:999px;\">×" + syn.total + "</span>" +
+          "</div>" +
+          "<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:11px;color:#cbd5e1;\">" +
+            "<div>🚘 Авто: <b style=\"color:#fff;\">" + syn.carName + " (×" + syn.carMult + ")</b></div>" +
+            "<div>🪪 Номер: <b style=\"color:#fff;\">" + syn.equippedCode + "</b></div>" +
+            "<div>🏛️ Регионов: <b style=\"color:#4ade80;\">" + syn.ownedRegs.length + " шт.</b></div>" +
+            "<div>📉 Комиссия биржи: <b style=\"color:#38bdf8;\">" + syn.marketFeePct + "%</b></div>" +
+          "</div>";
+        view.insertAdjacentElement("afterbegin", card);
+      }
+
+      // Б. Аккуратная строка Смены инспектора внутри карточки терминала
+      if (!document.getElementById("mreo-clean-shift-row")) {
+        const st = getSt() || {};
+        const shift = Math.min(SHIFT_GOAL, Number(st.winPity) || 0);
+        const combo = Math.min(15, Number(st.winCombo) || 0);
+        const divs = Array.from(view.querySelectorAll("div"));
+        const termHeader = divs.find(d => (d.textContent || "").includes("ТЕРМИНАЛ ВЫДАЧИ МРЭО") && d.children.length >= 2);
+        if (termHeader && termHeader.parentElement) {
+          const bar = document.createElement("div");
+          bar.id = "mreo-clean-shift-row";
+          bar.style.cssText = "display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:800;color:#94a3b8;margin-top:8px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.06);";
+          bar.innerHTML =
+            "<span>Смена инспектора: <b style=\"color:#fde047;\">" + shift + " / " + SHIFT_GOAL + "</b></span>" +
+            "<span>Серия: <b style=\"color:#4ade80;\">+" + combo + "%</b> · Возврат талона: <b style=\"color:#38bdf8;\">10%</b></span>";
+          termHeader.parentElement.appendChild(bar);
+        }
+      }
+    } finally {
+      hookLock = false;
+    }
+  }
+
+  // Обработка крутки окна (без вызова повторного render(), чтобы не вызывать цикл перерисовки)
+  document.addEventListener("click", function(e) {
+    const btn = e.target && e.target.closest ? e.target.closest("button") : null;
+    if (!btn) return;
+    const bTxt = btn.textContent || "";
+    if (!bTxt.includes("Получить по талону") && !bTxt.includes("Выбить номер")) return;
+
+    const st = getSt();
+    if (!st) return;
+
+    setTimeout(function() {
+      const shift = Number(st.winPity) || 0;
+      const combo = Number(st.winCombo) || 0;
+      const comboMult = 1 + Math.min(0.15, combo * 0.01);
+
+      if (shift >= SHIFT_GOAL - 1) {
+        const midPool = [
+          { f: "К", d: "303", t: "МР", reg: "77", val: 58000 },
+          { f: "В", d: "505", t: "ОР", reg: "97", val: 52000 },
+          { f: "С", d: "707", t: "АМ", reg: "77", val: 68000 },
+          { f: "М", d: "808", t: "КХ", reg: "77", val: 64000 }
+        ];
+        const pick = midPool[Math.floor(Math.random() * midPool.length)];
+        if (Array.isArray(st.plates) && st.plates.length > 0) {
+          const top = st.plates;
+          top.f = pick.f; top.d = pick.d; top.t = pick.t; top.reg = pick.reg;
+          if ("a" in top) top.a = pick.f;
+          if ("num" in top) top.num = pick.d;
+          if ("b" in top) top.b = pick.t;
+          top.rar = "rare";
+          if ("tier" in top) top.tier = "rare";
+          top.val = Math.round(pick.val * comboMult);
+        }
+        st.cash = (Number(st.cash) || 0) + 15000;
+        st.winPity = 0;
+        notifyMsg("Смена 50/50 закрыта! Премия +15 000 ₽ и номер " + pick.f + " " + pick.d + " " + pick.t + " " + pick.reg, false);
+      } else {
+        st.winPity = shift + 1;
+        if (Array.isArray(st.plates) && st.plates.length > 0 && typeof st.plates.val === "number") {
+          const capped = Math.min(160000, Math.round((st.plates.val * 0.85 * comboMult) / 500) * 500);
+          st.plates.val = Math.max(3500, capped);
+        }
+      }
+
+      st.winCombo = Math.min(15, combo + 1);
+
+      if (Math.random() < 0.10) {
+        st.free = (Number(st.free) || 0) + 1;
+        notifyMsg("🍀 Талон не погашен: +1 талон возвращён", false);
+      }
+
+      saveOnly();
+      const bar = document.getElementById("mreo-clean-shift-row");
+      if (bar) {
+        bar.innerHTML =
+          "<span>Смена инспектора: <b style=\"color:#fde047;\">" + (Number(st.winPity) || 0) + " / " + SHIFT_GOAL + "</b></span>" +
+          "<span>Серия: <b style=\"color:#4ade80;\">+" + (Number(st.winCombo) || 0) + "%</b> · Возврат талона: <b style=\"color:#38bdf8;\">10%</b></span>";
+      }
+    }, 90);
+  }, true);
+
+  function initSafeObserver() {
+    const view = document.getElementById("view");
+    if (!view) return;
+    injectSafeOverlays();
+    // Наблюдаем только за прямыми детьми #view (без subtree: true), чтобы исключить рекурсию и зависания
+    const obs = new MutationObserver(function() {
+      if (!hookLock) injectSafeOverlays();
+    });
+    obs.observe(view, { childList: true });
+  }
+
+  if (document.readyState === "loading") {
+    window.addEventListener("DOMContentLoaded", initSafeObserver);
+  } else {
+    initSafeObserver();
+  }
 })();

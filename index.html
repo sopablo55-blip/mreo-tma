@@ -1,39 +1,42 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>МРЭО РФ · Номера и Автопарк</title>
   <script src="https://telegram.org"></script>
-  <link rel="stylesheet" href="style.css?v=full_size_plates_v39" />
+  <link rel="stylesheet" href="style.css?v=v176" />
 </head>
 <body>
   <div id="app" class="app">
     <header class="top-bar">
       <div class="user-pill">
         <div class="emblem" aria-label="Герб РФ">
-          <svg viewBox="0 0 28 28" width="22" height="22" fill="none">
-            <path d="M14 2.5L23.5 6.2V13.6C23.5 19.3 19.4 23.7 14 25.5C8.6 23.7 4.5 19.3 4.5 13.6V6.2L14 2.5Z" fill="url(#rfShieldGrad)" stroke="rgba(255,255,255,0.45)" stroke-width="1"/>
+          <svg viewBox="0 0 28 28" width="24" height="24" fill="none">
+            <path d="M14 2.5L23.5 6.2V13.6C23.5 19.3 19.4 23.7 14 25.5C8.6 23.7 4.5 19.3 4.5 13.6V6.2L14 2.5Z" fill="url(#rfShieldGrad)" stroke="rgba(253,224,71,0.75)" stroke-width="1.3"/>
             <path d="M8.5 10.5H19.5V12.5H8.5V10.5Z" fill="#FFFFFF"/>
-            <path d="M8.5 12.5H19.5V14.5H8.5V12.5Z" fill="#1D4ED8"/>
+            <path d="M8.5 12.5H19.5V14.5H8.5V12.5Z" fill="#2563EB"/>
             <path d="M8.5 14.5H19.5V16.5H8.5V14.5Z" fill="#DC2626"/>
             <defs>
               <linearGradient id="rfShieldGrad" x1="4.5" y1="2.5" x2="23.5" y2="25.5" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#FDE047"/>
-                <stop offset="0.55" stop-color="#F59E0B"/>
-                <stop offset="1" stop-color="#B45309"/>
+                <stop stop-color="#FDE047" stop-opacity="0.45"/>
+                <stop offset="0.55" stop-color="#F59E0B" stop-opacity="0.22"/>
+                <stop offset="1" stop-color="#B45309" stop-opacity="0.12"/>
               </linearGradient>
             </defs>
           </svg>
         </div>
-        <div>
-          <div class="app-title"><span class="live-dot"></span>МРЭО РФ · ОНЛАЙН</div>
+        <div class="user-meta">
+          <div class="app-title"><span class="live-dot"></span><span>ИНСПЕКЦИЯ РФ</span></div>
           <div id="username" class="user-sub">Ур. 1 · Новичок</div>
         </div>
       </div>
       <div class="res-pills">
         <div class="bal-pill"><span id="balance">0 ₽</span></div>
-        <div class="tix-pill"><span>🎫</span> <b id="tickets">0</b></div>
+        <div class="tix-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3" stroke="#38BDF8" stroke-width="2.2"/><circle cx="12" cy="12" r="2" fill="#38BDF8"/></svg>
+          <b id="tickets">0</b>
+        </div>
       </div>
     </header>
 
@@ -65,6 +68,10 @@
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l2-5h14l2 5v11H3z"/><path d="M9 14h6"/></svg>
         <span>Рынок</span>
       </button>
+    <button class="dock-item" data-tab="shop" type="button">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1l-4 8-4-8H6"/><circle cx="6" cy="12" r="3"/></svg>
+      <span>Магазин</span>
+    </button>
       <button class="dock-item" data-tab="profile" type="button">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.8-4 14.2-4 16 0"/></svg>
         <span>Профиль</span>
@@ -74,8 +81,8 @@
     <div id="modal" class="modal"></div>
   </div>
   </div>
-  <script src="cars.js?v=cars_restored_v1"></script>
-  <script src="game.js?v=rolled_back_v43"></script>
+  <script src="cars.js?v=no_mreo_online_v58"></script>
+  <script src="game.js?v=safe_no_freeze_v113"></script>
   <script id="bg-parallax-scroll">
 (function() {
   var ticking = false;
@@ -92,5 +99,17 @@
   }, { passive: true });
 })();
 </script>
+  <script src="box-workshop.js?v=v141"></script>
+  <script src="market-exchange.js?v=v137"></script>
+  <script src="garage-tuning.js?v=v137"></script>
+  <script src="clean-ui.js?v=syn_help_v143"></script>
+  <script src="economy-guard.js?v=v138"></script></script></script></script>
+  <script src="extra-features.js?v=v164"></script>
+  <script src="intercept-chase.js?v=v163"></script>
+  <script src='state-tenders.js?v=v183'></script>
 </body>
 </html>
+
+<script src="business-hub.js?v=v171"></script>
+
+<script src="ecosystem-synergy.js?v=v172"></script>

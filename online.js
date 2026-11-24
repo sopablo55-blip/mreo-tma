@@ -77,3 +77,44 @@
 
   window.Online = Online;
 })();
+
+/* === TELEGRAM_STARS_PAYMENTS_V83 === */
+(function() {
+  if (window.__mreoStarsV83) return;
+  window.__mreoStarsV83 = true;
+
+  window.buyWithTelegramStars = async function(tierId, starsCost, onSuccess) {
+    const tg = window.Telegram && window.Telegram.WebApp;
+    const uid = (typeof window.getCurrentTgId === "function") ? window.getCurrentTgId() : "guest";
+
+    // Если запущено внутри Telegram Mini App — запрашиваем ссылку на инвойс в валюте XTR (Telegram Stars)
+    if (tg && tg.initData && typeof tg.openInvoice === "function") {
+      try {
+        if (typeof supabase !== "undefined" && supabase && supabase.functions) {
+          const { data, error } = await supabase.functions.invoke("create_stars_invoice", {
+            body: { userId: uid, tierId: tierId, stars: starsCost, currency: "XTR" }
+          });
+          if (!error && data && data.invoiceUrl) {
+            tg.openInvoice(data.invoiceUrl, function(status) {
+              if (status === "paid") {
+                if (typeof onSuccess === "function") onSuccess();
+              } else if (status === "failed" && typeof toast === "function") {
+                toast("Оплата не прошла. Попробуйте снова.", true);
+              }
+            });
+            return;
+          }
+        }
+      } catch (_) {}
+      if (typeof toast === "function") {
+        toast("Для оплаты в Stars подключите Edge Function create_stars_invoice в Supabase.", true);
+      }
+      return;
+    }
+
+    // Вне Telegram (в обычном браузере ПК) уведомляем игрока
+    if (typeof toast === "function") {
+      toast("Оплата в Telegram Stars (" + starsCost + " ⭐) доступна при запуске игры внутри Telegram!", true);
+    }
+  };
+})();

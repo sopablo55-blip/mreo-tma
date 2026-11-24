@@ -19,7 +19,7 @@ html, body {
 header {
   display: flex; align-items: center; justify-content: space-between;
   background: rgba(13, 16, 26, 0.9);
-  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: none; -webkit-backdrop-filter: none;
   border: 1px solid var(--border); border-radius: 18px;
   padding: 10px 14px; margin-bottom: 14px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55);
@@ -43,7 +43,7 @@ header {
 .hero, .panel {
   display: block; position: relative; overflow: hidden;
   background: var(--glass);
-  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: none; -webkit-backdrop-filter: none;
   border: 1px solid var(--border); border-radius: 22px;
   padding: 16px; margin-bottom: 14px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
@@ -91,7 +91,7 @@ nav.tabs {
   pointer-events: auto; max-width: 444px; margin: 0 auto;
   display: flex; justify-content: space-between; gap: 2px;
   background: rgba(13, 15, 23, 0.94);
-  backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: none; -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.13); border-radius: 20px; padding: 6px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.8);
 }
@@ -106,7 +106,7 @@ nav.tabs {
   color: #fbbf24; box-shadow: inset 0 0 0 1px rgba(245, 158, 11, 0.42);
 }
 
-.garage-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.garage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 10px; }
 .garage-item {
   display: flex; flex-direction: column; justify-content: space-between;
   background: rgba(14, 17, 26, 0.95);
@@ -623,8 +623,8 @@ nav.tabs {
 /* === ПРОЗРАЧНОЕ МАТОВОЕ СТЕКЛО ДЛЯ НИЖНЕЙ ПАНЕЛИ === */
 .tabs {
   background: rgba(14, 18, 28, 0.42) !important;
-  backdrop-filter: blur(18px) saturate(160%) !important;
-  -webkit-backdrop-filter: blur(18px) saturate(160%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45) !important;
 }
@@ -753,7 +753,7 @@ nav.tabs {
   background: linear-gradient(145deg, #ffffff, #cbd5e1);
   border: 2px solid #94a3b8;
   box-shadow: 0 8px 20px rgba(0,0,0,0.65), inset 0 2px 2px #fff;
-  display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); grid-template-rows: repeat(3, 1fr);
   padding: 8px; gap: 2px;
 }
 .die-box.rolling { animation: dieRoll 0.55s cubic-bezier(0.2, 0.9, 0.3, 1); }
@@ -768,8 +768,8 @@ nav.tabs {
 /* === ЭФФЕКТ LIQUID GLASS (ЖИДКОЕ СТЕКЛО В СТИЛЕ iOS) === */
 .liquid-glass, .panel, .hero, .btn.ghost {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.085) 0%, rgba(18, 22, 34, 0.55) 50%, rgba(255, 255, 255, 0.03) 100%) !important;
-  backdrop-filter: blur(22px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(22px) saturate(180%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.16) !important;
   box-shadow:
     0 12px 32px rgba(0, 0, 0, 0.45),
@@ -815,8 +815,8 @@ nav.tabs {
 /* === iOS 26/27 LIQUID GLASS (ЗЕРКАЛЬНЫЕ ГРАНИ И ПРЕЛОМЛЕНИЕ) === */
 .panel, .hero, .garage-item, .chip {
   background: linear-gradient(155deg, rgba(255, 255, 255, 0.11) 0%, rgba(16, 20, 32, 0.48) 45%, rgba(255, 255, 255, 0.04) 100%) !important;
-  backdrop-filter: blur(26px) saturate(195%) !important;
-  -webkit-backdrop-filter: blur(26px) saturate(195%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   box-shadow:
     0 14px 36px rgba(0, 0, 0, 0.5),
@@ -846,8 +846,8 @@ nav, .nav, .tabbar, .bottom-bar, .footer {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 /* === УБИРАЕМ ДЛИННУЮ ПОЛОСУ ВНИЗУ И ЦЕНТРИРУЕМ КНОПКИ === */
@@ -855,8 +855,8 @@ body > nav, .app > nav, .shell > nav, #tabs-wrap {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 #tabs {
   width: fit-content !important;
@@ -875,8 +875,8 @@ body > nav, .app > nav, .shell > nav, #tabs-wrap {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 #tabs {
   width: fit-content !important;
@@ -896,8 +896,8 @@ nav, .nav, .tabbar, .bottom-nav, [class*="tab-bar"], [class*="bottom"] {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 #tabs {
   position: fixed !important;
@@ -909,8 +909,8 @@ nav, .nav, .tabbar, .bottom-nav, [class*="tab-bar"], [class*="bottom"] {
   width: fit-content !important;
   max-width: 96vw !important;
   background: rgba(14, 18, 28, 0.55) !important;
-  backdrop-filter: blur(22px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(22px) saturate(180%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.16) !important;
   border-radius: 22px !important;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.55) !important;
@@ -998,7 +998,7 @@ nav, .nav, .tabbar, .bottom-nav, [class*="tab-bar"], [class*="bottom"] {
 
 /* === РЕЙД ДПС (МОДЕРНИЗИРОВАННЫЕ МИНЫ 4x4) === */
 .raid-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 8px;
   max-width: 276px; margin: 10px auto 12px;
 }
 .raid-tile {
@@ -1061,8 +1061,8 @@ nav, .nav, .tabbar, .bottom-nav, [class*="tab-bar"], [class*="bottom"] {
   display: inline-flex !important;
   justify-content: center !important;
   background: rgba(14, 18, 28, 0.72) !important;
-  backdrop-filter: blur(22px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(22px) saturate(180%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.16) !important;
   border-radius: 22px !important;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65) !important;
@@ -1104,8 +1104,8 @@ body {
 /* Верхняя шапка в стиле iOS Navigation Bar */
 .top {
   background: rgba(18, 22, 34, 0.58) !important;
-  backdrop-filter: blur(28px) saturate(210%) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 24px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
@@ -1126,8 +1126,8 @@ body {
 /* Все карточки и панели — iOS Liquid Glass */
 .panel, .hero, .garage-item, .modal-box {
   background: var(--ios-glass) !important;
-  backdrop-filter: blur(28px) saturate(210%) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid var(--ios-border) !important;
   border-radius: 24px !important;
   box-shadow:
@@ -1170,8 +1170,8 @@ body {
 /* Нижний Dock iOS */
 #tabs {
   background: rgba(20, 24, 36, 0.62) !important;
-  backdrop-filter: blur(30px) saturate(220%) !important;
-  -webkit-backdrop-filter: blur(30px) saturate(220%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.22) !important;
   border-radius: 26px !important;
   padding: 5px 6px !important;
@@ -1234,8 +1234,8 @@ body {
 /* Все карточки — настоящее многослойное Liquid Glass iOS 27 */
 .panel, .hero, .garage-item, .top, .modal-box {
   background: var(--ios27-glass) !important;
-  backdrop-filter: blur(32px) saturate(225%) !important;
-  -webkit-backdrop-filter: blur(32px) saturate(225%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid var(--ios27-rim) !important;
   border-radius: 26px !important;
   box-shadow:
@@ -1287,8 +1287,8 @@ body {
 }
 .btn.ghost {
   background: var(--ios27-glass-hi) !important;
-  backdrop-filter: blur(20px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.26) !important;
   color: #ffffff !important;
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4) !important;
@@ -1297,8 +1297,8 @@ body {
 /* Плавающий стеклянный Dock iOS 27 с жидкой каплей активной вкладки */
 #tabs {
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.18), rgba(20, 26, 40, 0.52)) !important;
-  backdrop-filter: blur(36px) saturate(240%) !important;
-  -webkit-backdrop-filter: blur(36px) saturate(240%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.32) !important;
   border-radius: 99px !important;
   padding: 5px 7px !important;
@@ -1324,7 +1324,7 @@ body {
 .chip, .wallet {
   border-radius: 99px !important;
   background: rgba(255, 255, 255, 0.08) !important;
-  backdrop-filter: blur(18px) saturate(190%) !important;
+  backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.22) !important;
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35) !important;
 }
@@ -1424,8 +1424,8 @@ body::before {
 /* Объёмные фаски и студийная глубина iOS 27 Glass */
 .panel, .hero, .garage-item, .top, .modal-box {
   background: linear-gradient(148deg, rgba(255, 255, 255, 0.19) 0%, rgba(26, 33, 52, 0.42) 45%, rgba(14, 18, 30, 0.58) 100%) !important;
-  backdrop-filter: blur(36px) saturate(240%) contrast(104%) !important;
-  -webkit-backdrop-filter: blur(36px) saturate(240%) contrast(104%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.32) !important;
   box-shadow:
     0 24px 54px rgba(0, 0, 0, 0.62),
@@ -1493,7 +1493,7 @@ body::before {
 /* Режим экономии батареи */
 body.eco-gfx::before { display: none !important; }
 body.eco-gfx .panel, body.eco-gfx .hero, body.eco-gfx .garage-item, body.eco-gfx .top, body.eco-gfx #tabs {
-  backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+  backdrop-filter: none; -webkit-backdrop-filter: none;
   background: rgba(20, 25, 38, 0.94) !important;
 }
 
@@ -1657,14 +1657,14 @@ body.light-theme .reel::before {
 /* === ПОЛУПРОЗРАЧНЫЙ LIQUID GLASS DOCK (#tabs) В ОБЕИХ ТЕМАХ === */
 #tabs {
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.14), rgba(16, 22, 34, 0.36)) !important;
-  backdrop-filter: blur(26px) saturate(210%) !important;
-  -webkit-backdrop-filter: blur(26px) saturate(210%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.28) !important;
 }
 body.light-theme #tabs {
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.56), rgba(241, 245, 249, 0.42)) !important;
-  backdrop-filter: blur(26px) saturate(210%) !important;
-  -webkit-backdrop-filter: blur(26px) saturate(210%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 1px solid rgba(255, 255, 255, 0.78) !important;
   box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12), inset 0 1.5px 1px rgba(255, 255, 255, 0.85) !important;
 }
@@ -1681,8 +1681,8 @@ body.light-theme #tabs button.active {
   gap: 2px !important;
   border-radius: 30px !important;
   background: linear-gradient(180deg, rgba(36, 42, 58, 0.58) 0%, rgba(18, 22, 34, 0.72) 100%) !important;
-  backdrop-filter: blur(28px) saturate(210%) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 0.75px solid rgba(255, 255, 255, 0.28) !important;
   box-shadow:
     0 16px 38px rgba(0, 0, 0, 0.58),
@@ -1765,8 +1765,8 @@ body.light-theme #tabs button.active {
   overflow-x: auto !important;
   scrollbar-width: none !important;
   background: linear-gradient(180deg, rgba(32, 38, 54, 0.52) 0%, rgba(14, 18, 28, 0.68) 100%) !important;
-  backdrop-filter: blur(34px) saturate(230%) !important;
-  -webkit-backdrop-filter: blur(34px) saturate(230%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 0.75px solid rgba(255, 255, 255, 0.34) !important;
   box-shadow:
     0 20px 48px rgba(0, 0, 0, 0.65),
@@ -1845,8 +1845,8 @@ body.light-theme #tabs button.active { color: #d97706 !important; text-shadow: n
    ===================================================================== */
 .hero, .panel, .garage-item, .top, .modal-box {
   position: relative;
-  backdrop-filter: blur(36px) saturate(210%) !important;
-  -webkit-backdrop-filter: blur(36px) saturate(210%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   box-shadow:
     0 24px 54px rgba(0, 0, 0, 0.55),
     inset 0 1.5px 1px rgba(255, 255, 255, 0.42),
@@ -1903,8 +1903,8 @@ body.light-theme #tabs button.active { color: #d97706 !important; }
   gap: 2px !important;
   border-radius: 30px !important;
   background: linear-gradient(180deg, rgba(36, 42, 58, 0.58) 0%, rgba(18, 22, 34, 0.72) 100%) !important;
-  backdrop-filter: blur(28px) saturate(210%) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 0.75px solid rgba(255, 255, 255, 0.28) !important;
   box-shadow:
     0 16px 38px rgba(0, 0, 0, 0.58),
@@ -2037,7 +2037,7 @@ nav.tabs {
   display: flex !important; align-items: center !important; justify-content: space-between !important;
   padding: 6px 6px !important; gap: 2px !important; border-radius: 30px !important;
   background: linear-gradient(180deg, rgba(36, 42, 58, 0.68) 0%, rgba(18, 22, 34, 0.82) 100%) !important;
-  backdrop-filter: blur(28px) saturate(210%) !important; -webkit-backdrop-filter: blur(28px) saturate(210%) !important;
+  backdrop-filter: none; -webkit-backdrop-filter: none;
   border: 0.75px solid rgba(255, 255, 255, 0.28) !important;
   box-shadow: 0 16px 38px rgba(0, 0, 0, 0.58), inset 0 1px 0.5px rgba(255, 255, 255, 0.45) !important;
   overflow: hidden !important;
@@ -2086,8 +2086,8 @@ nav.tabs, #tabs, #tabs button, .btn, .chip, .ios-switch { pointer-events: auto !
 /* Многослойное жидкое стекло Apple iOS 27 на всех карточках */
 .top, .hero, .panel {
   background: linear-gradient(160deg, rgba(30, 36, 52, 0.62) 0%, rgba(14, 18, 28, 0.78) 100%) !important;
-  backdrop-filter: blur(38px) saturate(220%) !important;
-  -webkit-backdrop-filter: blur(38px) saturate(220%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 0.75px solid rgba(255, 255, 255, 0.16) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.32) !important;
   border-radius: 26px !important;
@@ -2143,8 +2143,8 @@ nav.tabs {
   align-items: center !important;
   justify-content: space-between !important;
   background: linear-gradient(180deg, rgba(36, 43, 62, 0.74) 0%, rgba(16, 20, 32, 0.88) 100%) !important;
-  backdrop-filter: blur(42px) saturate(240%) !important;
-  -webkit-backdrop-filter: blur(42px) saturate(42px) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 0.75px solid rgba(255, 255, 255, 0.24) !important;
   border-top: 1px solid rgba(255, 255, 255, 0.44) !important;
   box-shadow:
@@ -2384,8 +2384,8 @@ main.app, #view, .btn, .chip, .case-buy-pill, .case-info-btn, .ios-switch { poin
   padding: 10px 18px !important;
   border-radius: 99px !important;
   background: linear-gradient(180deg, rgba(28, 34, 48, 0.94) 0%, rgba(12, 16, 26, 0.98) 100%) !important;
-  backdrop-filter: blur(28px) saturate(200%) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(200%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 0.75px solid rgba(251, 191, 36, 0.45) !important;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.65), inset 0 1px 0.5px rgba(255, 255, 255, 0.35) !important;
   color: #f8fafc !important;
@@ -2413,8 +2413,8 @@ main.app, #view, .btn, .chip, .case-buy-pill, .case-info-btn, .ios-switch { poin
   inset: 0 !important;
   z-index: 5000 !important;
   background: rgba(5, 8, 16, 0.72) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -2628,7 +2628,7 @@ main.app, #view, .btn, .chip, .case-buy-pill, .case-info-btn, .ios-switch { poin
 }
 .reroll-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 7px;
 }
 .reroll-btn {
@@ -2650,7 +2650,7 @@ main.app, #view, .btn, .chip, .case-buy-pill, .case-info-btn, .ios-switch { poin
 
 .frames-grid-2x2 {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 7px;
   margin-top: 8px;
 }
@@ -2958,7 +2958,7 @@ main.app, #view, .btn, .chip, .case-buy-pill, .case-info-btn, .ios-switch { poin
 }
 .mkt-ticker-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 6px;
   margin-bottom: 10px;
 }
@@ -3419,7 +3419,7 @@ main.app, #view, .btn, .chip, .case-buy-pill, .case-info-btn, .ios-switch { poin
 /* === APPLE_HOT_OFFERS_LUXURY === */
 .hot-grid-lux {
   display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr)) !important;
   gap: 9px !important;
   margin-top: 10px !important;
 }
@@ -3676,7 +3676,7 @@ main.app, #view, .btn, .chip, .case-buy-pill, .case-info-btn, .ios-switch { poin
 /* === APPLE_VIP_GARAGE_PLATES_GRID === */
 .garage-grid {
   display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr)) !important;
   gap: 10px !important;
 }
 .garage-plate-card {
@@ -3858,13 +3858,13 @@ html body #nav, html body nav {
   border-radius: 28px !important;
   overflow: hidden !important;
   background: rgba(16, 20, 30, 0.78) !important;
-  backdrop-filter: blur(40px) saturate(210%) !important;
-  -webkit-backdrop-filter: blur(40px) saturate(210%) !important;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   border: 0.5px solid rgba(255, 255, 255, 0.16) !important;
   border-top: 0.75px solid rgba(255, 255, 255, 0.32) !important;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.58) !important;
   display: grid !important;
-  grid-template-columns: repeat(7, 1fr) !important;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr)) !important;
   align-items: center !important;
   z-index: 999 !important;
   user-select: none !important;
@@ -4197,746 +4197,37 @@ html, body {
   overflow: visible !important;
 }
 
-
-
-/* === IOS27_LIGHT_OVERRIDE_END_OF_CSS === */
-html:has(body.light-theme), body.light-theme {
-  background: radial-gradient(120% 80% at 50% 0%, #f8fafc 0%, #eef2f6 52%, #e2e8f0 100%) !important;
-  color: #0f172a !important;
-}
-
-/* Основные контейнеры */
-:is(body.light-theme) #view .hero,
-:is(body.light-theme) #view .panel,
-:is(body.light-theme) #view .card,
-:is(body.light-theme) #view .garage-plate-card,
-:is(body.light-theme) #view .market-lot-card {
-  background: rgba(255, 255, 255, 0.88) !important;
-  background-image: none !important;
-  border: 0.75px solid rgba(255, 255, 255, 1) !important;
-  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
-  color: #0f172a !important;
-}
-
-/* Все внутренние карточки: спец-кейсы, горячие предложения, пакет талонов, госзадания, плашки */
-:is(body.light-theme) #view .case-card-lux,
-:is(body.light-theme) #view .case-card-lux.c1,
-:is(body.light-theme) #view .case-card-lux.c2,
-:is(body.light-theme) #view .case-card-lux.c3,
-:is(body.light-theme) #view .case-card-lux.c4,
-:is(body.light-theme) #view .hot-deal-card,
-:is(body.light-theme) #view .hot-bundle-card,
-:is(body.light-theme) #view .quest-card,
-:is(body.light-theme) #view .quest-item,
-:is(body.light-theme) #view .stat-pill {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 245, 249, 0.95) 100%) !important;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.98) 0%, rgba(241, 245, 249, 0.95) 100%) !important;
-  border: 0.75px solid rgba(15, 23, 42, 0.09) !important;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
-  color: #0f172a !important;
-}
-
-/* Чистые иконки без тёмных квадратов */
-:is(body.light-theme) #view .case-medal,
-:is(body.light-theme) #view .hot-bundle-ico {
-  background: rgba(15, 23, 42, 0.05) !important;
-  background-image: none !important;
-  border: 0.75px solid rgba(15, 23, 42, 0.08) !important;
-  box-shadow: none !important;
-  color: #d97706 !important;
-}
-:is(body.light-theme) #view .case-card-lux.c1 .case-medal { color: #0284c7 !important; background: rgba(2, 132, 199, 0.1) !important; }
-:is(body.light-theme) #view .case-card-lux.c2 .case-medal { color: #e11d48 !important; background: rgba(225, 29, 72, 0.1) !important; }
-:is(body.light-theme) #view .case-card-lux.c3 .case-medal { color: #d97706 !important; background: rgba(217, 119, 6, 0.12) !important; }
-:is(body.light-theme) #view .case-card-lux.c4 .case-medal { color: #b45309 !important; background: rgba(245, 158, 11, 0.16) !important; }
-
-/* 100% контрастный текст во всех кнопках, спецрамках (Бокс), заданиях и заголовках */
-:is(body.light-theme) #view .case-title-row span,
-:is(body.light-theme) #view .hot-bundle-card div,
-:is(body.light-theme) #view .quest-card b,
-:is(body.light-theme) #view .stat-pill b,
-:is(body.light-theme) #view h2,
-:is(body.light-theme) #view h3,
-:is(body.light-theme) #view button:not(.primary):not(.case-buy-pill):not(.dock-item) b,
-:is(body.light-theme) #view button:not(.primary):not(.case-buy-pill):not(.dock-item) span {
-  color: #0f172a !important;
-  text-shadow: none !important;
-}
-:is(body.light-theme) #view .case-desc-txt,
-:is(body.light-theme) #view .muted,
-:is(body.light-theme) #view .stat-pill span {
-  color: #475569 !important;
-  opacity: 1 !important;
-  text-shadow: none !important;
-}
-
-/* Кнопки выбора в Боксе (Буквы/Цифры/Регион/Спецрамки) и Мини-играх */
-:is(body.light-theme) #view button:not(.primary):not(.case-buy-pill):not(.dock-item):not(.case-info-btn) {
-  background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%) !important;
-  background-image: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%) !important;
-  border: 0.75px solid rgba(15, 23, 42, 0.12) !important;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04) !important;
-  color: #0f172a !important;
-}
-
-/* Поле ввода ставки и планшет постов в Мини-играх */
-:is(body.light-theme) #view input {
-  background: #ffffff !important;
-  border: 1px solid rgba(15, 23, 42, 0.15) !important;
-  color: #0f172a !important;
-}
-:is(body.light-theme) #view [class*="raid"],
-:is(body.light-theme) #view [class*="radar"],
-:is(body.light-theme) #view [class*="safe"],
-:is(body.light-theme) #view [class*="board"],
-:is(body.light-theme) #view [class*="tablet"] {
-  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%) !important;
-  border: 0.75px solid rgba(15, 23, 42, 0.12) !important;
-  color: #0f172a !important;
-}
-
-/* Неактивные кнопки покупки */
-:is(body.light-theme) #view .case-buy-pill.cant-afford {
-  background: rgba(15, 23, 42, 0.07) !important;
-  background-image: none !important;
-  color: #64748b !important;
-  border: 0.5px solid rgba(15, 23, 42, 0.1) !important;
-  box-shadow: none !important;
-}
-
-/* Нижняя панель навигации iOS 27 Light Liquid Glass */
-:is(body.light-theme) #nav,
-:is(body.light-theme) nav,
-:is(body.light-theme) .liquid-dock {
-  background: rgba(255, 255, 255, 0.88) !important;
-  border: 0.5px solid rgba(15, 23, 42, 0.1) !important;
-  border-top: 0.75px solid rgba(255, 255, 255, 1) !important;
-  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12) !important;
-}
-:is(body.light-theme) .dock-pill {
-  background: radial-gradient(ellipse at 50% 0%, rgba(251, 191, 36, 0.25) 0%, rgba(245, 158, 11, 0.1) 65%, rgba(255, 255, 255, 0.94) 100%) !important;
-  border: 0.5px solid rgba(245, 158, 11, 0.35) !important;
-}
-:is(body.light-theme) .dock-item { color: #64748b !important; }
-:is(body.light-theme) .dock-item.active { color: #d97706 !important; }
-:is(body.light-theme) .dock-item span { display: block !important; opacity: 1 !important; }
-
-/* === IOS27_LIQUID_GLASS_4K_120FPS_CLEAN === */
-.top-bar .emblem {
-  width: 36px; height: 36px; border-radius: 12px;
-  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
-  color: #0f172a; font-weight: 900; font-size: 13px;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.38);
-  flex-shrink: 0;
-}
-.top-bar .user-pill { display: flex; align-items: center; gap: 10px; }
-.plate svg { filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35)); }
-
-/* === IOS27_LIQUID_GLASS_4K_120FPS_CLEAN === */
-.top-bar .emblem {
-  width: 36px; height: 36px; border-radius: 12px;
-  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
-  color: #0f172a; font-weight: 900; font-size: 13px;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.38);
-  flex-shrink: 0;
-}
-.top-bar .user-pill { display: flex; align-items: center; gap: 10px; }
-.plate svg { filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35)); }
-
-/* === IOS27_LIQUID_GLASS_4K_120FPS_CLEAN === */
-.top-bar .emblem {
-  width: 36px; height: 36px; border-radius: 12px;
-  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
-  color: #0f172a; font-weight: 900; font-size: 13px;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.38);
-  flex-shrink: 0;
-}
-.top-bar .user-pill { display: flex; align-items: center; gap: 10px; }
-.plate svg { filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35)); }
-
-/* === IOS27_LIQUID_GLASS_4K_120FPS_CLEAN === */
-.top-bar .emblem {
-  width: 36px; height: 36px; border-radius: 12px;
-  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
-  color: #0f172a; font-weight: 900; font-size: 13px;
-  display: flex; align-items: center; justify-content: center;
-  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.38);
-  flex-shrink: 0;
-}
-.top-bar .user-pill { display: flex; align-items: center; gap: 10px; }
-.plate svg { filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35)); }
-
-
-
-/* === IOS27_PREMIUM_TOP_HEADER_V1 === */
-/* === APPLE iOS 27 · CRAFTED MINIMAL TOP BAR === */
-html body .top-bar {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  gap: 12px !important;
-  padding: 10px 14px !important;
-  margin-bottom: 12px !important;
-  border-radius: 22px !important;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.075) 0%, rgba(15, 23, 42, 0.55) 100%) !important;
-  backdrop-filter: blur(28px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
-  border: 0.75px solid rgba(255, 255, 255, 0.12) !important;
-  border-top: 0.75px solid rgba(255, 255, 255, 0.28) !important;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.16) !important;
-}
-
-html body .top-bar .user-pill {
-  display: flex !important;
-  align-items: center !important;
-  gap: 11px !important;
-  min-width: 0 !important;
-}
-
-html body .top-bar .emblem {
-  width: 38px !important;
-  height: 38px !important;
-  border-radius: 12px !important;
-  background: linear-gradient(145deg, rgba(251, 191, 36, 0.22) 0%, rgba(217, 119, 6, 0.08) 100%) !important;
-  border: 0.75px solid rgba(251, 191, 36, 0.38) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
-  flex-shrink: 0 !important;
-}
-
-html body .top-bar .app-title {
-  display: flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  font-size: 13px !important;
-  font-weight: 800 !important;
-  letter-spacing: 0.03em !important;
+/* === FULL_PREMIUM_CLEAN_REDESIGN_V52 === */
+/* 1. Сверхбыстрый премиальный фон и типографика без тяжёлых размытий (120 FPS) */
+html, body {
+  background: radial-gradient(120% 80% at 50% 0%, #151c2c 0%, #090c13 65%, #06080d 100%) !important;
   color: #f8fafc !important;
-  line-height: 1.2 !important;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: geometricPrecision !important;
 }
 
-html body .top-bar .live-dot {
-  width: 6px !important;
-  height: 6px !important;
-  border-radius: 50% !important;
-  background: #22c55e !important;
-  box-shadow: 0 0 8px #22c55e !important;
-  flex-shrink: 0 !important;
-}
-
-html body .top-bar .user-sub {
-  font-size: 11.5px !important;
-  font-weight: 600 !important;
-  color: #94a3b8 !important;
-  margin-top: 2px !important;
-}
-
-html body .top-bar .res-pills {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: flex-end !important;
-  gap: 4px !important;
-  flex-shrink: 0 !important;
-}
-
-html body .top-bar .bal-pill {
-  padding: 3px 9px !important;
-  border-radius: 9px !important;
-  background: rgba(255, 255, 255, 0.06) !important;
-  border: 0.5px solid rgba(255, 255, 255, 0.12) !important;
-}
-
-html body .top-bar #balance {
-  font-size: 13.5px !important;
-  font-weight: 800 !important;
-  color: #ffffff !important;
-  letter-spacing: -0.01em !important;
-  font-variant-numeric: tabular-nums !important;
-}
-
-html body .top-bar .tix-pill {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 4px !important;
-  padding: 2px 8px !important;
-  border-radius: 8px !important;
-  background: rgba(56, 189, 248, 0.1) !important;
-  border: 0.5px solid rgba(56, 189, 248, 0.24) !important;
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  color: #7dd3fc !important;
-  font-variant-numeric: tabular-nums !important;
-}
-
-/* Светлая тема */
-html body.light-theme .top-bar {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(248, 250, 252, 0.86) 100%) !important;
-  border: 0.75px solid rgba(15, 23, 42, 0.08) !important;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06) !important;
-}
-html body.light-theme .top-bar .app-title,
-html body.light-theme .top-bar #balance {
-  color: #0f172a !important;
-}
-html body.light-theme .top-bar .bal-pill {
-  background: rgba(15, 23, 42, 0.04) !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-}
-html body.light-theme .top-bar .tix-pill {
-  background: #e0f2fe !important;
-  border-color: rgba(2, 132, 199, 0.2) !important;
-  color: #0369a1 !important;
-}
-
-/* === CLEAN_GARAGE_CARDS_AND_NO_BLACK_FRAME_FINAL === */
+/* 2. Полностью убираем чёрные рамки и тёмные коробки вокруг госномеров и в рулетке кейсов */
 html body .plate,
 html body .plate-wrap,
 html body .plate-box,
-html body .g-plate {
+html body .g-plate,
+html body div:has(> .plate),
+html body div:has(> svg.gost-svg),
+html body #modal div[style*="overflow"] > div > div,
+html body #modal div[style*="overflow"] > div > div > div {
   background: transparent !important;
   background-color: transparent !important;
   background-image: none !important;
   border: none !important;
+  outline: none !important;
   box-shadow: none !important;
   padding: 0 !important;
-  margin: 6px 0 !important;
 }
+
 html body .plate::before,
 html body .plate::after {
   display: none !important;
   content: none !important;
-}
-
-/* Аккуратные стеклянные карточки госномеров в Гараже и на Рынке */
-html body #view .g-item,
-html body #view .garage-item,
-html body #view .market-item,
-html body #view .panel > div[style*="grid"] > div {
-  background: rgba(255, 255, 255, 0.04) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 18px !important;
-  padding: 12px !important;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25) !important;
-}
-
-/* Чёткие читаемые фильтры ("Дорогие сверху", "Слить обычные") */
-html body #view .panel button[data-a*="sort"],
-html body #view .panel button[data-a*="melt"],
-html body #view .panel button[data-a*="filter"] {
-  background: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  color: #f1f5f9 !important;
-  font-weight: 700 !important;
-  opacity: 1 !important;
-}
-
-/* === SHARP_WHITE_PILLS_EVERYWHERE_V18 === */
-html body #view .panel div[style*="flex-wrap"] > div,
-html body #view .panel div[style*="flex-wrap"] > span,
-html body #view .panel div[style*="flex-wrap"] > button,
-html body #view .chip,
-html body #view [class*="chip"] {
-  background: rgba(255, 255, 255, 0.13) !important;
-  background-image: none !important;
-  border: 1px solid rgba(255, 255, 255, 0.32) !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25) !important;
-  color: #ffffff !important;
-  font-weight: 800 !important;
-  opacity: 1 !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45) !important;
-}
-
-html body #view .panel div[style*="flex-wrap"] > div *,
-html body #view .panel div[style*="flex-wrap"] > span *,
-html body #view .panel div[style*="flex-wrap"] > button *,
-html body #view .chip *,
-html body #view [class*="chip"] * {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: #ffffff !important;
-  opacity: 1 !important;
-}
-
-/* === REMOVE_OUTER_BLACK_SLOT_AROUND_PLATE === */
-html body #view div:has(> .plate),
-html body #view div:has(> svg.gost-svg) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  min-height: 0 !important;
-}
-
-/* === REMOVE_OUTER_BLACK_SLOT_IN_CASES_V20 === */
-html body #modal div:has(> .plate),
-html body #modal div:has(> svg.gost-svg),
-html body .modal div:has(> .plate),
-html body .modal div:has(> svg.gost-svg) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  min-height: 0 !important;
-}
-
-
-/* === REMOVE_WHITE_GLASS_BOX_BEHIND_PILLS_V21 === */
-/* 1. Убираем белое стеклянное окно-коробку позади пилюль в обоих блоках (Спецсерии и Медиа-коллекция) */
-html body #view .panel div[style*="flex-wrap"],
-html body #view .panel div[style*="flex"],
-html body #view .panel div:has(> button[data-a*="ser"]),
-html body #view .panel div:has(> button[data-a*="arch"]),
-html body #view .panel div:has(> .arch-chip),
-html body #view .panel div:has(> .ser-chip) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 2px 0 !important;
-}
-
-/* === MINIMALIST_GRAPHITE_BG_V1 === */
-:root {
-  --bg-shift: 0px;
-  --bg-hue: 0deg;
-}
-
-html, body {
-  background-color: #090c12 !important;
-  background-image:
-    radial-gradient(125% 75% at 20% calc(-8% + var(--bg-shift)), rgba(56, 189, 248, 0.16) 0%, transparent 60%),
-    radial-gradient(115% 70% at 85% calc(96% - var(--bg-shift)), rgba(245, 158, 11, 0.12) 0%, transparent 58%),
-    linear-gradient(180deg, #0d121d 0%, #080a0f 100%) !important;
-  background-attachment: fixed !important;
-}
-
-body.light-theme, html:has(body.light-theme) {
-  background-color: #f1f4f9 !important;
-  background-image:
-    radial-gradient(125% 75% at 20% calc(-6% + var(--bg-shift)), rgba(14, 165, 233, 0.13) 0%, transparent 58%),
-    radial-gradient(115% 70% at 85% calc(94% - var(--bg-shift)), rgba(245, 158, 11, 0.09) 0%, transparent 55%),
-    linear-gradient(180deg, #f6f8fc 0%, #e9edf5 100%) !important;
-  background-attachment: fixed !important;
-}
-
-/* === MEDIA_COLLECTION_EXACT_MATCH_ARCHIVE_V24 === */
-/* Убираем белую прямоугольную подложку у контейнера в Медиа-коллекции РФ (даже если там inline style) */
-html body #view .panel > div[style*="background"]:has(> div, > span, > button) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 2px 0 !important;
-}
-
-/* === EXACT_REMOVE_INNER_GLASS_INSERTS_V28 === */
-/* 1. Убираем овальную белую вставку вокруг "Оценка: 1 056 300 ₽" и заголовок "Спецсерия" */
-html body #view .roll-val-badge,
-html body #view .roll-sub,
-html body #view .roll-tag {
-  background: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 2px 0 !important;
-}
-
-/* 2. Убираем внутренние белые овальные вставки вокруг текста в Настройках, Квестах и Талонах */
-html body #view .set-row > div:first-child,
-html body #view .q-item > div:nth-child(2),
-html body #view .quest-row > div:nth-child(2),
-html body #view .tix-item > div:nth-child(2),
-html body #view .panel [class*="row"] > div:not([class*="ico"]):not([class*="sw"]):not([class*="toggle"]) {
-  background: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-}
-
-/* 3. Убираем белую прямоугольную коробку вокруг кнопок пилюль в Верстаке и Медиа-коллекции */
-html body #view .panel > div[style*="flex-wrap"],
-html body #view .arch-grid,
-html body #view .media-grid,
-html body #view .wb-chips {
-  background: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 2px 0 !important;
-}
-
-/* === REMOVE_PILL_BAR_BOXES_AND_DESC_BOXES_V29 === */
-/* 1. Убираем белые прямоугольные коробки позади пилюль (Медиа-коллекция, Сортировка гаража, Фильтры рынка) */
-html body #view .panel div:has(> button),
-html body #view .panel div:has(> span[style*="border-radius"]),
-html body #view .panel div:has(> div[style*="border-radius"]:not([class*="card"]):not([class*="item"])),
-html body #view .sort-row,
-html body #view .filter-row,
-html body #view .chip-row,
-html body #view .tabs-row {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 2px 0 !important;
-}
-
-/* 2. Убираем лишнюю стеклянную рамку вокруг текста описания в карточках Биржи */
-html body #view .panel .m-desc,
-html body #view .panel .lore-box,
-html body #view .panel div > p,
-html body #view .panel div > div:not(:has(button, svg, input)) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-/* Убираем обводку со служебных заголовков, чтобы случайно не обводились */
-html body #view .panel > div:has(> .section),
-html body #view .panel-hdr {
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  border-radius: 0 !important;
-}
-
-/* 2. Убираем жидкое стекло (овальные рамки) вокруг номера, заголовка серии и строки "Оценка:" на 2-м и 3-м фото */
-html body #view .roll-sub,
-html body #view .roll-tag,
-html body #view .roll-val-badge,
-html body #view .plate,
-html body #view .plate-wrap,
-html body #view .plate-box,
-html body #view .g-plate,
-html body #view div:has(> .plate),
-html body #view div:has(> svg.gost-svg) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* 3. Возвращаем яркую янтарно-золотую подсветку кнопкам выкупа и покупки */
-html body #view button[data-a*="buy"],
-html body #view button[data-a*="mkt_buy"],
-html body #view button[data-a*="case"],
-html body #view .buy-btn {
-  background: linear-gradient(180deg, rgba(251, 191, 36, 0.28) 0%, rgba(217, 119, 6, 0.14) 100%) !important;
-  border: 1px solid rgba(251, 191, 36, 0.55) !important;
-  color: #fde047 !important;
-  font-weight: 800 !important;
-  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.22) !important;
-}
-
-/* === REMOVE_GLASS_OVALS_FROM_STAND_AND_MARKET_V31 === */
-/* 1. Убираем овальное жидкое стекло вокруг заголовка серии, самого номера и строки "Оценка:" */
-html body #view .panel div[style*="max-width:236px"],
-html body #view .panel div[style*="margin:0 auto"],
-html body #view .panel .roll-val-badge,
-html body #view .panel .roll-sub,
-html body #view .panel .roll-tag,
-html body #view .panel div:has(> .plate),
-html body #view .panel div:has(> svg.gost-svg),
-html body #view .panel div[style*="letter-spacing"]:not(:has(button)) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* 2. Убираем стеклянную рамку вокруг описания серии в лотах Биржи */
-html body #view .panel div[style*="line-height"]:not(:has(button, svg)) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/* 3. Возвращаем янтарно-золотой цвет кнопкам "Выкупить с биржи" */
-html body #view button[data-a*="mkt"] {
-  background: linear-gradient(180deg, rgba(251, 191, 36, 0.28) 0%, rgba(217, 119, 6, 0.14) 100%) !important;
-  border: 1px solid rgba(251, 191, 36, 0.55) !important;
-  color: #fde047 !important;
-  font-weight: 800 !important;
-}
-
-/* === OVERRIDE_ALL_STUBBORN_GLASS_V32 === */
-/* 1. Убираем жидкое стекло с описания серии в Бирже (div.muted) */
-html body #view section.panel div.muted,
-html body #view .panel div.muted {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  padding: 0 !important;
-}
-
-/* 2. Убираем овальное стекло вокруг номера, заголовка серии и "Оценка:" */
-html body #view section.panel div[style*="max-width:236px"],
-html body #view section.panel div.roll-val-badge,
-html body #view section.panel div.roll-sub,
-html body #view section.panel div.roll-tag,
-html body #view section.panel div.plate,
-html body #view section.panel div.plate-wrap {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* 3. Возвращаем яркий янтарно-золотой градиент кнопке "Выкупить с биржи" (data-a="buy_lot") */
-html body #view section.panel button.btn.primary[data-a="buy_lot"],
-html body #view button[data-a="buy_lot"] {
-  background: linear-gradient(180deg, rgba(251, 191, 36, 0.30) 0%, rgba(217, 119, 6, 0.16) 100%) !important;
-  border: 1px solid rgba(251, 191, 36, 0.58) !important;
-  color: #fde047 !important;
-  font-weight: 800 !important;
-  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.24) !important;
-}
-
-/* === CLEAN_MINIGAMES_BOXES_AND_LOT_OVALS_V33 === */
-/* 1. Убираем прямоугольные коробки позади рядов кнопок в Мини-играх МРЭО и любых вкладок */
-html body #view .chips,
-html body #view .bet-grid,
-html body #view .bet-row,
-html body #view div:has(> button.chip),
-html body #view div:has(> button[data-a="g_mode"]),
-html body #view div:has(> button[data-a="g_bet"]) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  padding: 2px 0 !important;
-}
-
-/* 2. Убираем овальную рамку вокруг номера и описания серии внутри всех карточек (#view без привязки к section) */
-html body #view .plate,
-html body #view .plate-wrap,
-html body #view .plate-box,
-html body #view .g-plate,
-html body #view div:has(> .plate),
-html body #view div:has(> svg.gost-svg),
-html body #view div.muted,
-html body #view .roll-val-badge,
-html body #view .roll-sub,
-html body #view .roll-tag {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* === MARKET_LOT_CLEAN_NO_INNER_GLASS_V34 === */
-/* Убираем овальные стеклянные рамки внутри карточек лотов на Бирже (шапка лота, обёртка номера, описание) */
-html body #view .panel > div > div[style*="justify-content:space-between"],
-html body #view .panel > div > div[style*="max-width"],
-html body #view .panel > div > div:not(:has(button)),
-html body #view .panel [class*="lot"] > div:not(:has(button)) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  border: none !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
-/* === CLEAN_PILL_OUTLINES_NO_OUTER_BOXES_V37 === */
-/* 1. Убираем окна-коробки позади пилюль во всех 4 блоках */
-html body #view .arch-grid,
-html body #view .media-grid,
-html body #view .wb-chips,
-html body #view .panel > div:has(> button.chip),
-html body #view .panel > div:has(> .arch-chip),
-html body #view .panel > div:has(> .ser-chip) {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 2px 0 !important;
-}
-
-/* 2. Красивая тонкая стеклянная обводочка вокруг каждой пилюли во всех 4 блоках */
-html body #view .chip,
-html body #view .arch-chip,
-html body #view .ser-chip,
-html body #view button[data-a*="ser"],
-html body #view button[data-a*="arch"],
-html body #view button[data-a*="pick"],
-html body #view button[data-a*="sel"],
-html body #view .arch-grid > *,
-html body #view .media-grid > *,
-html body #view .wb-chips > * {
-  background: rgba(255, 255, 255, 0.05) !important;
-  background-image: none !important;
-  border: 1px solid rgba(255, 255, 255, 0.24) !important;
-  border-radius: 999px !important;
-  padding: 6px 13px !important;
-  color: #ffffff !important;
-  font-weight: 800 !important;
-  box-shadow: none !important;
-  opacity: 1 !important;
-}
-
-
-/* === RESTORE_CASE_ICON_BADGES_V38 === */
-html body .plate,
-html body .plate-wrap,
-html body .plate-box,
-html body .g-plate {
-  width: 100% !important;
-  max-width: 240px !important;
-  height: auto !important;
-  margin: 6px auto !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
 }
 
 html body .plate svg,
@@ -4944,24 +4235,531 @@ html body svg.gost-svg {
   width: 100% !important;
   height: auto !important;
   display: block !important;
+  border-radius: 8px !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.38) !important;
 }
 
-/* Подложки-логотипы ТОЛЬКО для иконок спец-кейсов по их точному классу */
-html body #view .case-ico,
-html body #view .c-ico {
+/* 3. Чистые современные карточки без двойных рамок и тормозящих фильтров */
+html body #view .panel,
+html body #view .hero {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background: linear-gradient(180deg, rgba(22, 29, 44, 0.94) 0%, rgba(13, 17, 27, 0.98) 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 22px !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.07) !important;
+  contain: layout style;
+}
+
+/* 4. Убираем любые прозрачные коробки-подложки вокруг рядов кнопок и вкладок */
+html body #view .seg,
+html body #view .tabs,
+html body #view .chips,
+html body #view .bet-grid,
+html body #view .bet-row,
+html body #view .sort-row,
+html body #view .filter-row,
+html body #view .arch-grid,
+html body #view .media-grid,
+html body #view div:has(> button.chip),
+html body #view div:has(> button[data-a="g_mode"]),
+html body #view div:has(> button[data-a="g_bet"]),
+html body #view div:has(> button[data-a*="tab"]) {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 2px 0 !important;
+}
+
+/* 5. Чёткие контрастные пилюли фильтров и коллекций */
+html body #view button.chip,
+html body #view .arch-chip,
+html body #view .ser-chip {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 999px !important;
+  color: #f1f5f9 !important;
+  font-weight: 700 !important;
+  box-shadow: none !important;
+}
+
+html body #view button.chip.got,
+html body #view button.chip.active,
+html body #view .arch-chip.active {
+  background: rgba(251, 191, 36, 0.18) !important;
+  border-color: rgba(251, 191, 36, 0.55) !important;
+  color: #fde047 !important;
+}
+
+/* 6. Фирменные янтарно-золотые кнопки главных действий с чётким читаемым текстом */
+html body #view button.btn.primary {
+  background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%) !important;
+  border: 1px solid rgba(254, 240, 138, 0.65) !important;
+  color: #0f172a !important;
+  font-weight: 900 !important;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.28) !important;
+}
+
+html body button {
+  transition: transform 0.14s ease, filter 0.14s ease !important;
+}
+html body button:active {
+  transform: scale(0.96) !important;
+}
+
+
+/* === REMOVE_BLACK_FRAMES_IN_CASE_ROULETTE_V53 === */
+/* Убираем чёрные рамки-коробки позади номеров в ленте рулетки кейсов (#modal и #modalBox) */
+html body :is(#modal, #modalBox) div:has(> .plate),
+html body :is(#modal, #modalBox) div:has(> svg.gost-svg),
+html body :is(#modal, #modalBox) .roulette-slot,
+html body :is(#modal, #modalBox) .roulette-slot > div,
+html body :is(#modal, #modalBox) [style*="overflow:hidden"] > div > div,
+html body :is(#modal, #modalBox) [style*="overflow: hidden"] > div > div {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  padding: 0 4px !important;
+}
+
+/* === NATIVE_TOP_BAR_DESIGN_V65 === */
+
+header.top-bar {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+  background: linear-gradient(135deg, #1b2130 0%, #12151e 100%) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 20px !important;
+  padding: 11px 13px !important;
+  margin-bottom: 12px !important;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+header.top-bar .user-pill {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 11px !important;
+  min-width: 0 !important;
+}
+
+header.top-bar .emblem {
   width: 44px !important;
   height: 44px !important;
   min-width: 44px !important;
   border-radius: 14px !important;
+  background: linear-gradient(145deg, rgba(250, 204, 21, 0.24) 0%, rgba(217, 119, 6, 0.08) 100%) !important;
+  border: 1px solid rgba(250, 204, 21, 0.45) !important;
+  box-shadow: 0 4px 14px rgba(250, 204, 21, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  background: rgba(255, 255, 255, 0.06) !important;
-  border: 1px solid rgba(255, 255, 255, 0.14) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.16) !important;
 }
-html body #view .case-ico svg,
-html body #view .c-ico svg {
-  width: 22px !important;
-  height: 22px !important;
+
+header.top-bar .user-meta {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 3px !important;
+}
+
+header.top-bar .app-title {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  color: #94a3b8 !important;
+}
+
+header.top-bar .live-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: #22c55e !important;
+  box-shadow: 0 0 8px #22c55e !important;
+}
+
+header.top-bar .user-sub {
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.01em !important;
+  white-space: nowrap !important;
+}
+
+header.top-bar .res-pills {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+  gap: 5px !important;
+  flex-shrink: 0 !important;
+}
+
+header.top-bar .bal-pill {
+  background: linear-gradient(180deg, rgba(250, 204, 21, 0.2) 0%, rgba(234, 179, 8, 0.08) 100%) !important;
+  border: 1px solid rgba(250, 204, 21, 0.42) !important;
+  color: #fde047 !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  padding: 5px 11px !important;
+  border-radius: 999px !important;
+  white-space: nowrap !important;
+}
+
+header.top-bar .tix-pill {
+  background: rgba(56, 189, 248, 0.14) !important;
+  border: 1px solid rgba(56, 189, 248, 0.34) !important;
+  color: #7dd3fc !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  padding: 3px 10px !important;
+  border-radius: 999px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  white-space: nowrap !important;
+}
+
+
+/* === CLEAN_SVG_EDGES_AND_ROULETTE_V67 === */
+/* Убираем чёрную обводку вокруг таблички госномера и делаем плавные скруглённые углы */
+html body .plate svg,
+html body svg.gost-svg {
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* Убираем квадратную золотую коробку по центру ленты рулетки кейсов, оставляя только центральную линию-указатель */
+html body :is(#modal, #modalBox) [style*="border"][style*="position:absolute"],
+html body :is(#modal, #modalBox) [style*="border"][style*="position: absolute"] {
+  border-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+
+/* === FIX_SPEC_FRAMES_GRID_V123 === */
+/* Выравниваем карточки "Спецрамки на выбранный номер" в сетку 2x2 без выпирания коэффициентов */
+html body #view .frames-grid,
+html body #view [class*="frame-grid"],
+html body #view [class*="frames"] {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 8px !important;
+}
+
+html body #view .frame-card,
+html body #view [class*="frame-item"],
+html body #view [class*="frame-btn"] {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 4px !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  padding: 10px 12px !important;
+}
+
+html body #view .frame-card > div:first-child,
+html body #view [class*="frame-item"] > div:first-child {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  gap: 6px !important;
+}
+
+/* === FIX_HORIZONTAL_ROW_CARDS_V132 === */
+
+html body #view .grid,
+html body #view .plates,
+html body #view .plate-grid,
+html body #view .cards {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+/* Возвращаем нормальную горизонтальную раскладку строчным карточкам (Кейсы, Магазин, Инкогнито, Госзадания) */
+html body #view .panel > div[style*="justify-content:space-between"],
+html body #view .row,
+html body #view .item-row,
+html body #view .case-row,
+html body #view .task-row,
+html body #view .setting-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 10px !important;
+}
+
+
+/* === EXACT_PLATES_CONTAINER_VERTICAL_V133 === */
+html body #view .inv-grid,
+html body #view .box-grid,
+html body #view .my-plates,
+html body #view .plates-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  width: 100% !important;
+}
+
+html body #view .inv-grid,
+html body #view .box-grid,
+html body #view .my-plates,
+html body #view .plates-list > div {
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* === PREMIUM_BUTTON_ANIMATIONS_V139 === */
+@keyframes mreoGoldPulse {
+  0%, 100% {
+    box-shadow: 0 4px 14px rgba(250, 204, 21, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(250, 204, 21, 0.65), 0 4px 18px rgba(245, 158, 11, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  }
+}
+
+@keyframes mreoShineSweep {
+  0% { left: -65%; }
+  45% { left: 135%; }
+  100% { left: 135%; }
+}
+
+@keyframes mreoRippleBurst {
+  0% { transform: translate(-50%, -50%) scale(0.2); opacity: 0.9; }
+  100% { transform: translate(-50%, -50%) scale(3.4); opacity: 0; }
+}
+
+@keyframes mreoBtnBounce {
+  0% { transform: scale(0.91); }
+  55% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+button, .btn {
+  position: relative !important;
+  overflow: hidden !important;
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, filter 0.18s ease !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:hover, .btn:hover {
+  transform: translateY(-2px) scale(1.02) !important;
+  filter: brightness(1.08);
+}
+
+button:active, .btn:active {
+  transform: scale(0.91) !important;
+  filter: brightness(0.95);
+}
+
+button.primary, .btn.primary {
+  animation: mreoGoldPulse 2.2s infinite ease-in-out !important;
+}
+
+.mreo-shine-bar {
+  position: absolute;
+  top: 0;
+  left: -65%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.68), transparent);
+  transform: skewX(-24deg);
+  pointer-events: none;
+  animation: mreoShineSweep 2.6s infinite ease-in-out;
+  z-index: 2;
+}
+
+.mreo-btn-ripple {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.85) 0%, rgba(250, 204, 21, 0.4) 45%, transparent 72%);
+  pointer-events: none;
+  animation: mreoRippleBurst 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  z-index: 4;
+}
+
+.mreo-btn-pop {
+  animation: mreoBtnBounce 0.32s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+
+/* === FIX_DOCK_ITEM_SQUARE_V142 === */
+.dock-item, .dock-item:hover, .dock-item:active, .dock-item:focus, .dock-item:focus-visible {
+  overflow: visible !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 50% !important;
+  transform: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.dock-item .mreo-btn-ripple,
+.dock-item .mreo-shine-bar {
+  display: none !important;
+}
+
+
+/* === SOLID_DOCK_NO_BLEED_V145 === */
+.app, #app, main, #view {
+  padding-bottom: 105px !important;
+}
+.liquid-dock, .dock, nav {
+  background: #0f1219 !important;
+  background-color: #0f1219 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+/* === FIX_EXTRA_HEADERS_V156 === */
+#mreo-region-clubs-card,
+#mreo-confiscate-auction,
+#mreo-dps-patrol-card {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#mreo-region-clubs-card > div:first-child,
+#mreo-confiscate-auction > div:first-child,
+#mreo-dps-patrol-card > div:first-child {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  gap: 12px !important;
+  margin-bottom: 10px !important;
+}
+
+#mreo-region-clubs-card > div:first-child > span:first-child,
+#mreo-confiscate-auction > div:first-child > span:first-child {
+  color: #facc15 !important;
+  font-weight: 900 !important;
+}
+
+#mreo-dps-patrol-card > div:first-child > span:first-child {
+  color: #38bdf8 !important;
+  font-weight: 900 !important;
+}
+
+#mreo-region-clubs-card > div:first-child > span:last-child,
+#mreo-confiscate-auction > div:first-child > span:last-child,
+#mreo-dps-patrol-card > div:first-child > span:last-child {
+  margin-left: auto !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  padding: 3px 9px !important;
+  border-radius: 999px !important;
+  background: rgba(56, 189, 248, 0.16) !important;
+  color: #7dd3fc !important;
+}
+/* === CLEAN_EXTRA_MODULES_LAYOUT_V160 === */
+.mreo-ext-card {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin: 0 0 12px 0 !important;
+  padding: 13px !important;
+}
+.mreo-ext-head {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  gap: 10px !important;
+  margin-bottom: 10px !important;
+}
+.mreo-ext-title {
+  font-size: 12px !important;
+  font-weight: 900 !important;
+  color: #facc15 !important;
+  letter-spacing: 0.03em !important;
+}
+.mreo-ext-badge {
+  background: rgba(56, 189, 248, 0.16) !important;
+  color: #7dd3fc !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  padding: 3px 9px !important;
+  border-radius: 999px !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+.mreo-ext-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  width: 100% !important;
+}
+.mreo-ext-row {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 9px 11px !important;
+  border-radius: 12px !important;
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.07) !important;
+}
+.mreo-ext-row.is-mine {
+  background: rgba(250, 204, 21, 0.14) !important;
+  border-color: rgba(250, 204, 21, 0.42) !important;
+}
+/* === FIX_STATE_TENDERS_VERTICAL_V176 === */
+#mreo-state-tenders-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+#mreo-state-tenders-card > .mreo-ext-head {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-bottom: 10px !important;
+}
+
+#mreo-state-tenders-card > div:not(.mreo-ext-head) {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-bottom: 10px !important;
+}
+
+#mreo-state-tenders-card button[data-tender-run] {
+  white-space: normal !important;
+  line-height: 1.25 !important;
+  padding: 8px 6px !important;
+  font-size: 11.5px !important;
+  min-height: 40px !important;
 }
