@@ -1599,6 +1599,7 @@ function renderModal() {
     const lvl = levelInfo();
     if (unameEl) unameEl.textContent = (me.username ? me.username + ' · ' : '') + 'Ур. ' + lvl.lvl + ' · ' + lvl.title;
     const view = $('#view');
+   const scrollY = window.scrollY;
     if (view) {
       try {
         if (tab === 'roll') view.innerHTML = renderRoll();
@@ -1609,7 +1610,9 @@ function renderModal() {
         else if (tab === 'games') view.innerHTML = renderGames();
         else if (tab === 'profile') view.innerHTML = renderProfile();
         else if (tab === 'shop') view.innerHTML = renderShop();
+       window.scrollTo(0, scrollY);
       } catch (err) {
+      window.scrollTo(0, scrollY);
         console.error(err);
         view.innerHTML = '<section class="hero"><h2>Ошибка вкладки: ' + tab + '</h2><p class="sub">' + String(err.message || err) + '</p></section>';
       }
